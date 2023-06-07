@@ -27,7 +27,7 @@ const Login = () => {
                     </section>
                     <section className=' md:flex justify-center'>
                         <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 login-from
-                     bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-white via-sky-500 to-sky-500
+                   bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-white via-sky-500 to-sky-500
                         ">
 
                             <h2 className=' text-[40px] font-[500]  text-center mt-20 '> Login  here!!!
@@ -69,14 +69,14 @@ const Login = () => {
 
                                 <div className="form-control mt-6">
                                     <button className="btn text-[15px] 
-                                    bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-white via-sky-500 to-sky-500 
+                                  bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-white via-sky-500 to-sky-500
                                    ">Login</button>
                                 </div>
 
                                 <div className="divider ">OR</div>
 
 
-                                <div className='btn bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-white via-sky-500 to-sky-500 '>
+                                <div className='btn  bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-white via-sky-500 to-sky-500 '>
                                     <BsGoogle className=' text-[30px]   ' />
                                 </div>
 
