@@ -30,11 +30,12 @@ const Login = () => {
                      bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-white via-sky-500 to-sky-500
                         ">
 
-                            <h2 className=' text-[40px] font-[500]  text-center mt-20 '> Login here!!!</h2>
+                            <h2 className=' text-[40px] font-[500]  text-center mt-20 '> Login  here!!!
+                            </h2>
                             <form onSubmit={handleSubmit(onSubmit)} className="card-body my-10">
                                 <div className="form-control">
                                     <label className="label ">
-                                        <span className="font-medium text-2xl my-2">Email</span>
+                                        <span className="font-medium text-2xl my-2 ">Email</span>
                                     </label>
                                     <input type="text" placeholder="email" className="input input-bordered"
 
@@ -44,7 +45,7 @@ const Login = () => {
                                 </div>
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="font-medium text-2xl my-2">Password</span>
+                                        <span className="font-medium text-2xl my-2 ">Password</span>
                                     </label>
                                     <input type={showHide ? 'password' : 'text'} placeholder="password" className="input input-bordered "
 
@@ -55,28 +56,28 @@ const Login = () => {
 
                                     <label className="label">
                                         <p onClick={() => setShowHide(!showHide)} className=" my-3 text-[30px]">
-                                            {showHide ? <AiFillEye  /> : <AiFillEyeInvisible />}
+                                            {showHide ? <AiFillEye  /> : <AiFillEyeInvisible  />}
                                         </p>
 
                                     </label>
                                 </div>
 
 
-                                <p> New user? <Link className=' text-orange-400' to='register'>please register</Link> </p>
+                                <p > New user? <Link className=' text-orange-400' to='/registration'>please register</Link> </p>
 
 
 
                                 <div className="form-control mt-6">
                                     <button className="btn text-[15px] 
-                                    bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-white via-sky-500 to-sky-500
+                                    bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-white via-sky-500 to-sky-500 
                                    ">Login</button>
                                 </div>
 
-                                <div className="divider">OR</div>
+                                <div className="divider ">OR</div>
 
 
                                 <div className='btn bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-white via-sky-500 to-sky-500 '>
-                                    <BsGoogle className=' text-[30px] ' />
+                                    <BsGoogle className=' text-[30px]   ' />
                                 </div>
 
 
