@@ -7,7 +7,7 @@ const Navbar = () => {
 
 
         <li>
-            <Link className=" text-[20px] font-[500] p-3 mx-3 text-white" to='/home'> Home</Link>
+            <Link className=" text-[20px] font-[500] p-3 mx-3 text-white " to='/home'> Home</Link>
         </li>
         <li>
             <Link className=" text-[20px] font-[500] p-3 mx-3 text-white" to='/instructors'> Instructors</Link>
@@ -22,7 +22,7 @@ const Navbar = () => {
             <img className="" src='' alt="" />
         </li>
         <li>
-            <button className="btn btn-outline btn-warning">Logout</button>
+            <button className=" btn-ghost text-[20px] font-[500] p-3 mx-3 text-white  ">Logout</button>
 
         </li>
 
