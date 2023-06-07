@@ -16,25 +16,26 @@ import img4 from '../../assets/homeBanner/pexels-turkan-bakirli-16999360.jpg'
 const HomeBanner = () => {
 
 
-    const pagination = {
-        clickable: true,
-        renderBullet: function (index, className) {
-            return '<span class=" ' + className + '">' + (index + 1) + "</span>";
-        },
-    };
+   
 
     return (
         <div className="py-36">
 
             <Swiper
-                pagination={pagination}
-                modules={[Pagination]}
-                className="mySwipe "
+                     slidesPerView={1}
+                     spaceBetween={30}
+                     centeredSlides={true}
+                     pagination={{
+                       clickable: true,
+                     }}
+                     modules={[Pagination]}
+                     className="mySwiper"
+             
             >
                 <SwiperSlide>
                     <div className=" relative">
 
-                        <img className="w-full h-[700px]" src={img2} alt="" />
+                        <img className="w-full h-[700px]" src={img3} alt="" />
 
                         <div className=" absolute bottom-[5%]  z-10">
 
@@ -112,7 +113,7 @@ const HomeBanner = () => {
                 <SwiperSlide>
                     <div className=" relative">
 
-                        <img className="w-full h-[700px]" src={img3} alt="" />
+                        <img className="w-full h-[700px]" src={img2} alt="" />
 
                         <div className=" absolute bottom-[5%]  z-10">
 
