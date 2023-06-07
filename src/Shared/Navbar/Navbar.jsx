@@ -18,6 +18,10 @@ const Navbar = () => {
         <li>
             <Link className=" text-[20px] font-[500] p-3 mx-3 text-white" to='/dashboard'> Dashboard </Link>
         </li>
+
+        <li>
+            <Link className=" text-[20px] font-[500] p-3 mx-3 text-white" to='/login'> Login </Link>
+        </li>
         <li>
             <img className="" src='' alt="" />
         </li>
@@ -30,7 +34,7 @@ const Navbar = () => {
     </>
     return (
         <div >
-            <div className="navbar  md:justify-between bg-orange-300 md:p-10">
+            <div className="navbar  fixed z-10  md:justify-between md:p-10 bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
 
                 <div className="">
 
@@ -44,8 +48,8 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="flex items-center space-x-10">
-                        <h2 className=" md:text-[30px] md:font-[500] ">Holy child school</h2>
-                     <img className="md:w-[70px] md:h-[70px] w-[40px] h-[40px] border-4  rounded-full border-black" src={logo} alt="" />
+                        <h2 className=" md:text-[30px] md:font-[500] text-white ">Holy child school</h2>
+                     <img className="md:w-[70px] md:h-[70px] w-[40px] h-[40px] border-4  rounded-full border-white" src={logo} alt="" />
                     </div>
 
                 </div>
