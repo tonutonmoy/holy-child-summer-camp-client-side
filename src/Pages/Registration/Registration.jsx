@@ -109,7 +109,7 @@ const Registration = () => {
 
 
 
-                                <p className='my-3'> All ready account? <Link className=' text-orange-400' to='/login'>please register</Link> </p>
+                                <p className='my-3'> All ready account? <Link className=' text-orange-400' to='/login'>please login</Link> </p>
 
 
 
