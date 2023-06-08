@@ -5,7 +5,7 @@ import HomeInstructorsSection from "../HomeInstructorsSection/HomeInstructorsSec
 
 const Home = () => {
     return (
-        <div className=" bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900-500" >
+        <div className=" bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900-500   " >
             <HomeBanner></HomeBanner>
 
             <HomeClassSection></HomeClassSection>

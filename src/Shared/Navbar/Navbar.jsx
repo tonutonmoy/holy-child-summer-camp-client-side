@@ -7,20 +7,20 @@ const Navbar = () => {
 
 
         <li>
-            <Link className=" text-[20px] font-[500] p-3 mx-3 text-white " to='/'> Home</Link>
+            <Link className=" text-[20px] font-[500] p-3 mx-3 md:text-white " to='/'> Home</Link>
         </li>
         <li>
-            <Link className=" text-[20px] font-[500] p-3 mx-3 text-white" to='/instructors'> Instructors</Link>
+            <Link className=" text-[20px] font-[500] p-3 mx-3 md:text-white" to='/instructors'> Instructors</Link>
         </li>
         <li>
-            <Link className=" text-[20px] font-[500] p-3 mx-3 text-white" to='/classes'> Classes</Link>
+            <Link className=" text-[20px] font-[500] p-3 mx-3 md:text-white" to='/classes'> Classes</Link>
         </li>
         <li>
-            <Link className=" text-[20px] font-[500] p-3 mx-3 text-white" to='/dashboard'> Dashboard </Link>
+            <Link className=" text-[20px] font-[500] p-3 mx-3 md:text-white" to='/dashboard'> Dashboard </Link>
         </li>
 
         <li>
-            <Link className=" text-[20px] font-[500] p-3 mx-3 text-white" to='/login'> Login </Link>
+            <Link className=" text-[20px] font-[500] p-3 mx-3 md:text-white" to='/login'> Login </Link>
         </li>
         <li>
             <img className="" src='' alt="" />

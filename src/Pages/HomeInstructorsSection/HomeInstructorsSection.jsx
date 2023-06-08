@@ -1,8 +1,8 @@
-
+import './HomeInstructorsSection.css'
 
 const HomeInstructorsSection = () => {
     return (
-        <div>
+        <div className='my-40'>
             
 
             <h2 className='text-[40px] font-medium text-center my-10'> Popular Instructors </h2>
@@ -10,29 +10,24 @@ const HomeInstructorsSection = () => {
 
 
 
-                <div className="card w-96  shadow-xl
-             bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black via-black to-red-500
-             
-           l ">
+                <div style={{border:'1px solid white'}} className="card w-full  shadow-xl  btn-outline hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black/60 to-red-500/60
+                 duration-[3s]  ">
                     <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
                     <div className="card-body">
-                        <h2 className="card-title mt-5">Class name: </h2>
-                        <p className=" text-[16px] font-[400] my-5">
-                            <span className=" font-[500]">Instructor name:</span>
+                        <h2 className="text-[25px] font-[400] mt-5 text-white">Instructor name: </h2>
+                        <p className=" text-[25px] font-[300] my-5 text-white">
+                            <span className=" font-[400] ">Classes name:</span>
 
                         </p>
-                        <p className=" text-[16px] font-[400] my-5">
-                            <span className=" font-[500]">Available seats:</span>
+                        <p className=" text-[25px] font-[300] my-5 text-white">
+                            <span className=" font-[400] ">Classes number:</span>
 
                         </p>
-                        <p className=" text-[16px] font-[400] my-5">
-                            <span className=" font-[500]">Total students:</span>
+                        <p className=" text-[25px] font-[300] my-5 text-white">
+                            <span className=" font-[400] ">Total enroll:</span>
 
                         </p>
-                        <p className=" text-[16px] font-[400] my-5">
-                            <span className=" font-[500]">Price:</span>
-
-                        </p>
+                     
 
                     </div>
                 </div>
