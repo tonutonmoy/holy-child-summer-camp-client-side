@@ -71,7 +71,8 @@ const AddAClass = () => {
 
 
               <section className=" text-center mt-10">
-              <button className="btn w-[50%] btn-outline border-white">Add</button>
+              <button className="btn w-[50%] btn-outline border-white bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-white via-sky-500 to-sky-500 hover:border-white hover:text-black
+              text-[17px] font-[500]">Add</button>
               </section>
 
             </form>

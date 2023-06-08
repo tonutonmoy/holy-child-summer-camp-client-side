@@ -1,5 +1,6 @@
 import HomeBanner from "../HomeBanner/HomeBanner";
 import HomeClassSection from "../HomeClassSection/HomeClassSection";
+import HomeExtraSection from "../HomeExtraSection/HomeExtraSection";
 import HomeInstructorsSection from "../HomeInstructorsSection/HomeInstructorsSection";
 
 
@@ -12,6 +13,8 @@ const Home = () => {
 
 
             <HomeInstructorsSection></HomeInstructorsSection>
+
+            <HomeExtraSection></HomeExtraSection>
         </div>
     );
 };

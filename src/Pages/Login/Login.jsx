@@ -10,7 +10,7 @@ import bg from '../../assets/login/undraw_Educator_re_ju47.png'
 const Login = () => {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
-    const [showHide, setShowHide] = useState(false)
+    const [showHide, setShowHide] = useState(true)
 
     const onSubmit = (e) => {
         event.preventDefault();
@@ -56,7 +56,7 @@ const Login = () => {
 
                                     <label className="label">
                                         <p onClick={() => setShowHide(!showHide)} className=" my-3 text-[30px]">
-                                            {showHide ? <AiFillEye  /> : <AiFillEyeInvisible  />}
+                                            {showHide ?  <AiFillEyeInvisible  />  :<AiFillEye  />}
                                         </p>
 
                                     </label>

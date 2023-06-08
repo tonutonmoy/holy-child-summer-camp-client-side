@@ -49,7 +49,7 @@ const MyClasses = () => {
 
 
                         <button className="btn w-full btn-outline border-white text-white text-[15px] font-[500]
-                        hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-red-500/60 via-black/60 to-red-500/50 hover:border-none">Add</button>
+                        hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-red-500/60 via-black/60 to-red-500/50 hover:border-none">Update</button>
                     </div>
                 </div>
 
