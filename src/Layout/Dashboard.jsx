@@ -31,7 +31,7 @@ const Dashboard = () => {
                         </li>
 
                         <li className=" text-[20px] font-[500] text-white my-5">
-                            <Link to='dashBoard/'>Payment history</Link>
+                            <Link to='paymentHistory'>Payment history</Link>
                         </li>
 
                         <li className=" text-[20px] font-[500] text-white my-5">
@@ -45,11 +45,11 @@ const Dashboard = () => {
                         </li>
 
                         <li className=" text-[20px] font-[500] text-white my-5">
-                            <Link to='dashBoard/'>Manage classes</Link>
+                            <Link to='manageClasses'>Manage classes</Link>
                         </li>
 
                         <li className=" text-[20px] font-[500] text-white my-5">
-                            <Link to='dashBoard/'>Manage users</Link>
+                            <Link to='manageUsers'>Manage users</Link>
                         </li>
 
                     </ul>

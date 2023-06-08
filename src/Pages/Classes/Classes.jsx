@@ -30,7 +30,7 @@ const Classes = () => {
 
               </p>
               
-              <button className="btn  btn-outline text-[20px] text-[400] text-white hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black/60 to-red-500/50 hover:border-none"> Select</button>
+              <button className="btn  btn-outline text-[20px] text-[400] text-white hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-red-500/60 via-black to-red-500/50 hover:border-none"> Select</button>
            
 
           </div>
