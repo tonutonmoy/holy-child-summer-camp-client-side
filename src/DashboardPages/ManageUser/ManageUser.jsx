@@ -7,7 +7,9 @@ const ManageUser = () => {
             <table className="table ">
                 {/* head */}
                 <thead className="  text-white text-[20px] 
-             bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r">
+             bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r
+             
+            ">
                     <tr>
 
                         <th>#</th>
