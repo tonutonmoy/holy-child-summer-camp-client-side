@@ -38,12 +38,10 @@ const Dashboard = () => {
                             <Link to='addAClass'>Add a class</Link>
                         </li>
 
-                        <li className=" text-[20px] font-[500] text-white my-5">
-                            <Link to='dashBoard/'>My selected class</Link>
-                        </li>
+                        
 
                         <li className=" text-[20px] font-[500] text-white my-5">
-                            <Link to='dashBoard/'>My classes</Link>
+                            <Link to='myClasses'>My classes</Link>
                         </li>
 
                         <li className=" text-[20px] font-[500] text-white my-5">

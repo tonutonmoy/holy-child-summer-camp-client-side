@@ -9,6 +9,7 @@ import Dashboard from "../Layout/Dashboard";
 import MySelectedClasses from "../DashboardPages/MySelectedClasses/MySelectedClasses";
 import MyEnrolledClasses from "../DashboardPages/MyEnrolledClasses/MyEnrolledClasses";
 import AddAClass from "../DashboardPages/AddAClass/AddAClass";
+import MyClasses from "../DashboardPages/MyClasses/MyClasses";
 
 
 const router = createBrowserRouter([
@@ -66,6 +67,11 @@ const router = createBrowserRouter([
 
         path: 'addAClass',
         element: <AddAClass></AddAClass>
+      },
+      {
+
+        path: 'myClasses',
+        element: <MyClasses></MyClasses>
       }
 
     ]
