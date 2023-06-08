@@ -5,7 +5,7 @@ import Navbar from "../Shared/Navbar/Navbar";
 
 const Dashboard = () => {
     return (
-        <div>
+        <div className="bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900">
 
             <Navbar></Navbar>
 
@@ -27,7 +27,7 @@ const Dashboard = () => {
                         </li>
 
                         <li className=" text-[20px] font-[500] text-white my-5">
-                            <Link to='dashBoard/'>My enrolled classes</Link>
+                            <Link to='myEnrolledClasses'>My enrolled classes</Link>
                         </li>
 
                         <li className=" text-[20px] font-[500] text-white my-5">

@@ -2,11 +2,12 @@ import { MdPayment } from 'react-icons/md';
 
 const MySelectedClasses = () => {
     return (
-        <div className=" w-[90%] mx-auto ">
+        <div className="">
             <div className="overflow-x-auto">
                 <table className="table ">
                     {/* head */}
-                    <thead>
+                    <thead className="  text-white text-[20px] 
+             bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r">
                         <tr>
 
                             <th>#</th>
@@ -25,7 +26,8 @@ const MySelectedClasses = () => {
                     </thead>
                     <tbody>
 
-                        <tr>
+                        <tr className=" text-white text-[15px] font-[400]
+                    bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r ">
                             <td></td>
                             <td>11</td>
                             <td>1</td>
