@@ -5,7 +5,8 @@ import { FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <footer className='bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-sky-400 to-blue-800' >
+        <footer className='bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-sky-400 to-blue-800 
+           ' >
             <section className="footer md:grid-cols-3 grid-cols-2 p-10  text-base-content">
                 <div >
 
@@ -51,9 +52,9 @@ const Footer = () => {
 
                 </div>
             </section>
-            <section className="footer footer-center p-4  text-base-content my-10">
+            <section className="footer footer-center p-4  text-base-content ">
                 <div>
-                    <p className='  text-white mb-20'>Copyright © 2023 - All right reserved by Holy Child School</p>
+                    <p className='  text-white mb-20 mt-10'>Copyright © 2023 - All right reserved by Holy Child School</p>
                 </div>
             </section>
         </footer >
