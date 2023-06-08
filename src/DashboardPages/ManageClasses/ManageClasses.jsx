@@ -22,7 +22,9 @@ const ManageClasses = () => {
 
     return (
         <div className=" w-[90%] mx-auto ">
-            <div className=" w-full grid grid-cols-2 space-x-10 py-60 rounded-[30px]" >
+
+<h2 className='text-[33px] font-medium text-center mt-60 mb-20 '>Manage classes </h2>
+            <div className=" w-full grid grid-cols-2 space-x-10  rounded-[30px]" >
 
 
 

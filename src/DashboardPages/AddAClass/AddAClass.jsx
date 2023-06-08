@@ -2,8 +2,8 @@
 
 const AddAClass = () => {
     return (
-        <div className=" w-full  " >
-
+        <div className=" w-full py-60  " >
+<h2 className='text-[33px] font-medium text-center  '>Add  a classes </h2>
 
             <form className="w-[90%] mx-auto     bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-white via-sky-500 to-sky-500 px-20 py-10 mt-40 rounded-lg " >
 

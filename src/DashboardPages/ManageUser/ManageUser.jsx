@@ -3,6 +3,9 @@
 const ManageUser = () => {
     return (
         <div className=" w-[90%] mx-auto  ">
+
+<h2 className='text-[33px] font-medium text-center mb-10 '>Manage users </h2>
+
         <div className="overflow-x-auto ">
             <table className="table ">
                 {/* head */}

@@ -3,10 +3,12 @@
 const MyClasses = () => {
     return (
         <div className=" w-[90%] mx-auto ">
-            <div className=" w-full space-x-10 py-60 rounded-[30px]" >
+
+<h2 className='text-[33px] font-medium text-center mt-60 '>My classes </h2>
+            <div className=" w-full space-x-10 py-20 rounded-[30px]" >
 
 
-
+           
                 <div className="card w-full grid md:grid-cols-2  shadow-xl bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black via-black650 to-red-500
                ">
                  <div>

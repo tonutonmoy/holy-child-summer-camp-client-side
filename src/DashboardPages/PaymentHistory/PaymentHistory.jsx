@@ -1,13 +1,11 @@
 
 
-const MyEnrolledClasses = () => {
+const PaymentHistory = () => {
     return (
+        <div className=" w-[90%] mx-auto  ">
 
+<h2 className='text-[33px] font-medium text-center mb-10'> Payment history  </h2>
 
-
-<div className=" w-[90%] mx-auto  ">
-
-<h2 className='text-[33px] font-medium text-center mb-10 '>Enrolled classes </h2>
         <div className="overflow-x-auto ">
             <table className="table ">
                 {/* head */}
@@ -17,14 +15,14 @@ const MyEnrolledClasses = () => {
 
                         <th>#</th>
 
-                        <th>Image</th>
-                        <th>Class name</th>
+                        <th>Name</th>
+                        <th>Email</th>
                         
-                        <th>Instructor name</th>
+                        <th>Price</th>
                       
-                        <th>price</th>
+                        <th>Transaction Id</th>
 
-                        <th>Payment</th>
+                        <th>Date</th>
 
                       
                     </tr>
@@ -53,8 +51,7 @@ const MyEnrolledClasses = () => {
         </div>
     </div>
 
-
     );
 };
 
-export default MyEnrolledClasses;
+export default PaymentHistory;
