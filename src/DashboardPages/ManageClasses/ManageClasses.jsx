@@ -34,40 +34,52 @@ console.log(allClassesData)
 
 
     return (
-        <div className=" w-[90%] mx-auto ">
+        <div className=" w-[90%] mx-auto mb-40">
 
 <h2 className='text-[33px] font-medium text-center mt-60 mb-20 '>Manage classes </h2>
-            <div className=" w-full grid grid-cols-2 space-x-10  rounded-[30px]" >
+            <div className=" w-full grid grid-cols-2 gap-10 rounded-[30px]" >
 
 
 
-                <div className="card w-full   shadow-xl bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black via-black650 to-red-500
-               ">
-                    <div>
-                        <img className='h-full w-full   rounded-l-[15px]   ' src='' alt="Shoes" />
+              {
+
+               allClassesData?.map(data=>  <div key={data?._id} className="card w-full   shadow-xl bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black via-black650 to-red-500
+               " style={{boxShadow:"10px 10px 10px black"}} >
+                    <div className="w-full p-5">
+                        <img className='h-[300px] w-full   rounded-l-[15px]   ' src={data?.classImage} alt="Shoes" />
                     </div>
                     <div className="card-body">
-                        <h2 className="text-[18px] font-[500] mt-5 text-white ">Class name: </h2>
-                        <p className=" text-[18px] font-[300] my-5 text-white">
-                            <span className=" font-[500] ">Instructor name:</span>
+                    <p className=" text-[16px] font-[300] my-5 text-white">
+                            <span className=" font-[500] ">Class name: </span>
+                            {data?.className}
+
+                        </p>
+                        <p className=" text-[16px] font-[300] my-5 text-white">
+                            <span className=" font-[500] ">Instructor name: </span>
+                            {data?.instructorName}
 
                         </p>
 
-                        <p className=" text-[18px] font-[300] my-5 text-white">
-                            <span className=" font-[500] ">Email:</span>
+                        <p className=" text-[16px] font-[300] my-5 text-white">
+                            <span className=" font-[500] ">Instructor Email: </span>
+                            {data?.instructorEmail}
 
                         </p>
-                        <p className=" text-[18px] font-[300] my-5 text-white">
-                            <span className=" font-[500] ">Available seats:</span>
+                        <p className=" text-[16px] font-[300] my-5 text-white">
+                            <span className=" font-[500] ">Available seats: </span>
+                            {data?.availableSeats}
 
                         </p>
 
-                        <p className=" text-[18px] font-[300] my-5 text-white">
-                            <span className=" font-[400] ">Price:</span>
+                        <p className=" text-[16px] font-[300] my-5 text-white">
+                            <span className=" font-[400] ">Price: </span>
+                           ${data?.price}
 
                         </p>
-                        <p className=" text-[18px] font-[300] my-5 text-white">
-                            <span className=" font-[400] ">Status:</span>
+                        <p className=" text-[16px] font-[300] my-5 text-white">
+                            <span className=" font-[400] ">Status: </span>
+
+                            {data?.status}
 
                         </p>
 
@@ -90,7 +102,9 @@ console.log(allClassesData)
 
                     </div>
                 </div>
+)
 
+              }
 
 
             </div>
