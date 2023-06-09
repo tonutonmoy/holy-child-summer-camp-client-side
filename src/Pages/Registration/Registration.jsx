@@ -63,7 +63,10 @@ const Registration = () => {
     const googleHandler=()=>{
 
         googleLogin()
-        .then(res=> console.log(res))
+        .then(res=> {
+            
+            toast.success("Login successfully");
+            console.log(res)})
        .catch(error=> console.log.log(error))
     }
 
@@ -82,7 +85,7 @@ const Registration = () => {
                         ">
 
                             <h2 className=' text-[30px] font-[500]  text-center mt-20 '> Registration here!!!</h2>
-                            <form onSubmit={handleSubmit(onSubmit)} className="card-body ">
+                            <form onSubmit={handleSubmit(onSubmit)} className="card-body py-0 ">
                                 <div className="form-control">
                                     <label className="label ">
                                         <span className="font-medium text-xl my-2">Name</span>
@@ -172,7 +175,7 @@ const Registration = () => {
                                    ">Login</button>
                                 </div>
 
-                                <div className="divider mt-10">OR</div>
+                                <div className="divider my-8">OR</div>
 
 
 
