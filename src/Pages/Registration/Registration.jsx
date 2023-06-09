@@ -4,9 +4,17 @@ import { BsGoogle } from 'react-icons/bs';
 
 
 import bg from '../../assets/login/undraw_Educator_re_ju47.png'
+import { useContext } from 'react';
+import { AuthContext } from '../../Provider/AuthProvider';
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Registration = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit, formState: { errors }, reset } = useForm();
+
+
+    const { createUser, updateUserProfile, googleLogin } = useContext(AuthContext)
 
 
 
@@ -14,7 +22,52 @@ const Registration = () => {
         event.preventDefault();
 
         console.log(e)
+
+        const name = e.name;
+        const email = e.email;
+        const password = e.password;
+        const confirmPassword = e.confirmPassword;
+        const photoUrl = e.photoUrl;
+
+
+
+        if (password !== confirmPassword) {
+
+            return toast.error("Password not match");
+
+        }
+
+
+        createUser(email, password)
+            .then(res => {
+
+                if (res) {
+
+                    updateUserProfile(name, photoUrl)
+                        .then(a => {
+
+                            console.log(a)
+                            toast.success('Registration Complete');
+
+                            reset()
+
+                        })
+                        .catch(error => console.log(error))
+                }
+            })
+            .catch(error => console.log(error))
     }
+
+
+
+    const googleHandler=()=>{
+
+        googleLogin()
+        .then(res=> console.log(res))
+       .catch(error=> console.log.log(error))
+    }
+
+
     return (
         <div>
             <div className="hero min-h-screen bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900">
@@ -29,7 +82,7 @@ const Registration = () => {
                         ">
 
                             <h2 className=' text-[30px] font-[500]  text-center mt-20 '> Registration here!!!</h2>
-                            <form onSubmit={handleSubmit(onSubmit)} className="card-body mb-10">
+                            <form onSubmit={handleSubmit(onSubmit)} className="card-body ">
                                 <div className="form-control">
                                     <label className="label ">
                                         <span className="font-medium text-xl my-2">Name</span>
@@ -44,7 +97,7 @@ const Registration = () => {
                                     <label className="label ">
                                         <span className="font-medium text-xl my-2">Email</span>
                                     </label>
-                                    <input type="text" placeholder="email" className="input input-bordered"
+                                    <input type="email" placeholder="email" className="input input-bordered"
 
                                         {...register("email", { required: true, })}
                                     />
@@ -79,7 +132,7 @@ const Registration = () => {
                                     </label>
                                     <input type='text' placeholder="confirm password" className="input input-bordered "
 
-                                        {...register("confirmPassword",{required:true} )}
+                                        {...register("confirmPassword", { required: true })}
                                     />
 
                                     {errors.confirmPassword && <p className=' text-red-500 my-3' >confirm password is required</p>}
@@ -95,7 +148,7 @@ const Registration = () => {
                                     </label>
                                     <input type='text' placeholder="photo url" className="input input-bordered "
 
-                                        {...register("photoUrl",{required:true} )}
+                                        {...register("photoUrl", { required: true })}
                                     />
 
                                     {errors.photoUrl && <p className=' text-red-500 my-3' >confirm password is required</p>}
@@ -119,20 +172,22 @@ const Registration = () => {
                                    ">Login</button>
                                 </div>
 
-                                <div className="divider">OR</div>
-
-
-                                <div className='btn bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-white via-sky-500 to-sky-500 '>
-                                    <BsGoogle className=' text-[30px] ' />
-                                </div>
+                                <div className="divider mt-10">OR</div>
 
 
 
-                                <div>
 
-                                </div>
+
+
                             </form>
+                            <div className='mx-8'>
+                                <button onClick={googleHandler} className='btn bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-white via-sky-500 to-sky-500  mb-10 w-full'>
+                                    <BsGoogle className=' text-[30px] ' />
+                                </button>
+
+                            </div>
                         </div>
+                        <ToastContainer />
                     </section>
                 </div>
             </div>
