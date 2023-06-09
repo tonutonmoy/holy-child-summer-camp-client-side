@@ -44,9 +44,41 @@ const Login = () => {
         googleLogin()
         .then(res=> {
             
+       
+            if(res){
+
+
+                const userInformation={
+                    userName: res?.user?.displayName,
+                    userEmail: res?.user?.email,
+                    userPhoto: res?.user?.photoURL,
+                    userRoll:'student'
+
+                }
+
+                console.log(userInformation)
+
+
+                fetch(`http://localhost:5000/allUsers/${res?.user?.email}`,{
+                    method:"POST",
+                    headers:{
+                        'content-type':'application/json'
+                    },
+                    body: JSON.stringify(userInformation)
+                })
+                .then((a)=> a.json())
+                .then(a=> console.log(a))
+                .catch(error=>{
+
+                   console.log(error)
+                })
+
+            }
+
             toast.success("Login successfully");
-            console.log(res)})
-       .catch(error=> console.log.log(error))
+            console.log(res)
+        })
+        .catch(error => console.log.log(error))
     }
 
     return (

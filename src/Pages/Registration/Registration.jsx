@@ -41,33 +41,109 @@ const Registration = () => {
         createUser(email, password)
             .then(res => {
 
+                console.log(res,'res')
+
                 if (res) {
 
                     updateUserProfile(name, photoUrl)
-                        .then(a => {
+                        .then(() => {
 
-                            console.log(a)
-                            toast.success('Registration Complete');
-
+                           
+                              
                             reset()
 
                         })
-                        .catch(error => console.log(error))
+                        .catch(error => console.log(error));
+
+
+
+
+
+                        const userInformation={
+                            userName: name,
+                            userEmail: email,
+                            userPhoto: photoUrl,
+                            userRoll:'student'
+
+                        }
+                        
+                        console.log(userInformation)
+
+                        fetch(`http://localhost:5000/allUsers/${email}`,{
+                            method:"POST",
+                            headers:{
+                                'content-type':'application/json'
+                            },
+                            body: JSON.stringify(userInformation)
+                        })
+                        .then((b)=>b.json())
+                        .then(b=>{
+
+                            console.log(b)
+                            toast.success('Registration Complete');
+                        })
+                        .catch(error=>{
+
+                           console.log(error)
+                        })
+
+                    
+
+                        
+
                 }
+
+
             })
-            .catch(error => console.log(error))
+            .catch(error => {
+                toast.error(error.message);
+
+                console.log(error)
+            })
     }
 
 
 
-    const googleHandler=()=>{
+    const googleHandler = () => {
 
         googleLogin()
-        .then(res=> {
-            
-            toast.success("Login successfully");
-            console.log(res)})
-       .catch(error=> console.log.log(error))
+            .then(res => {
+
+
+                if(res){
+
+
+                    const userInformation={
+                        userName: res?.user?.displayName,
+                        userEmail: res?.user?.email,
+                        userPhoto: res?.user?.photoURL,
+                        userRoll:'student'
+
+                    }
+
+                    console.log(userInformation)
+
+
+                    fetch(`http://localhost:5000/allUsers/${res?.user?.email}`,{
+                        method:"POST",
+                        headers:{
+                            'content-type':'application/json'
+                        },
+                        body: JSON.stringify(userInformation)
+                    })
+                    .then((a)=> a.json())
+                    .then(a=> console.log(a))
+                    .catch(error=>{
+
+                       console.log(error)
+                    })
+
+                }
+
+                toast.success("Login successfully");
+                console.log(res)
+            })
+            .catch(error => console.log.log(error))
     }
 
 
