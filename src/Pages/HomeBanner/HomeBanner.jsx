@@ -19,7 +19,7 @@ const HomeBanner = () => {
    
 
     return (
-        <div className="py-36">
+        <div className="pt-36  " style={{boxShadow:'30px 30px 30px black'}}>
 
             <Swiper
                      slidesPerView={1}
@@ -33,7 +33,7 @@ const HomeBanner = () => {
              
             >
                 <SwiperSlide>
-                    <div className=" relative">
+                    <div className=" relative ">
 
                         <img className="w-full h-[700px]" src={img3} alt="" />
 

@@ -3,6 +3,12 @@ import Footer from "../Shared/Footer/Footer";
 import Navbar from "../Shared/Navbar/Navbar";
 
 
+
+import { BsFillBookmarkCheckFill} from 'react-icons/bs';
+import { HiFolderAdd} from 'react-icons/hi';
+import { FaBook,FaUsers} from 'react-icons/fa';
+import { MdDoneOutline,MdPayment,MdBorderColor} from 'react-icons/md';
+
 const Dashboard = () => {
     return (
         <div className="bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900">
@@ -23,33 +29,34 @@ const Dashboard = () => {
                     <ul className="menu p-4 w-80 h-full text-base-content md:mt-[150px] mt-12 md:pt-10 bg-sky-500 ">
                         {/* Sidebar content here */}
                         <li className=" text-[20px] font-[500] text-white my-5">
-                            <Link to='mySelectedClasses'>My selected classes</Link>
+                          
+                            <Link to='mySelectedClasses'>   <BsFillBookmarkCheckFill/>My selected classes</Link>
                         </li>
 
                         <li className=" text-[20px] font-[500] text-white my-5">
-                            <Link to='myEnrolledClasses'>My enrolled classes</Link>
+                            <Link to='myEnrolledClasses'><MdDoneOutline/> My enrolled classes</Link>
                         </li>
 
                         <li className=" text-[20px] font-[500] text-white my-5">
-                            <Link to='paymentHistory'>Payment history</Link>
+                            <Link to='paymentHistory'><MdPayment/> Payment history</Link>
                         </li>
 
                         <li className=" text-[20px] font-[500] text-white my-5">
-                            <Link to='addAClass'>Add a class</Link>
+                            <Link to='addAClass'><HiFolderAdd/> Add a class</Link>
                         </li>
 
                         
 
                         <li className=" text-[20px] font-[500] text-white my-5">
-                            <Link to='myClasses'>My classes</Link>
+                            <Link to='myClasses'> <MdBorderColor/>My classes</Link>
                         </li>
 
                         <li className=" text-[20px] font-[500] text-white my-5">
-                            <Link to='manageClasses'>Manage classes</Link>
+                            <Link to='manageClasses'><FaBook/>Manage classes</Link>
                         </li>
 
                         <li className=" text-[20px] font-[500] text-white my-5">
-                            <Link to='manageUsers'>Manage users</Link>
+                            <Link to='manageUsers'><FaUsers/> Manage users</Link>
                         </li>
 
                     </ul>
