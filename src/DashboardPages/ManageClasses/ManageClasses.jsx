@@ -1,11 +1,24 @@
+import useAllClassesData from "../../Hooks/useAllClassesData";
+
 
 
 const ManageClasses = () => {
 
- const   feedbackHandler=(e)=>{
+const [allClassesData,refetch]=useAllClassesData()
+
+
+
+console.log(allClassesData)
+
+
+
+
+
+
+ const feedbackHandler=(e)=>{
         
 
-    const feedback=e.target.text.value
+    const feedback=e.target.text.value;
 
     if(!feedback){
        return console.log('nei')
