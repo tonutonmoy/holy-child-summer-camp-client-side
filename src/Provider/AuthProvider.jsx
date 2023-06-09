@@ -74,25 +74,25 @@ const AuthProvider = ({ children }) => {
             console.log(currentUser)
 
 
-            // if (currentUser) {
-            //     axios.post('http://localhost:5000/jwt', { email: currentUser.email })
-            //         .then(data => {
+            if (currentUser) {
+                axios.post('http://localhost:5000/jwt', { email: currentUser.email })
+                    .then(data => {
 
 
 
-            //             localStorage.setItem('jwt-token', data.data)
+                        localStorage.setItem('jwt-token', data.data)
 
-            //             console.log(data.data)
+                        console.log(data.data)
 
-            //             setLoading(false)
-
-
-            //         })
+                        setLoading(false)
 
 
+                    })
 
-            // }
-            // else { localStorage.removeItem('access-token') }
+
+
+            }
+            else { localStorage.removeItem('jwt-token') }
 
 
 
