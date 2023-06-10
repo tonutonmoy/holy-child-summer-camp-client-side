@@ -34,7 +34,7 @@ const Dashboard = () => {
             .then(res => {
 
                 setRol(res)
-                console.log(res)
+                
             })
 
 

@@ -1,6 +1,9 @@
 import { useContext, useEffect, useState } from 'react';
 import { BsFillBookmarkCheckFill} from 'react-icons/bs';
 import { AuthContext } from '../../Provider/AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Swal from 'sweetalert2';
 
 const Classes = () => {
 
@@ -28,7 +31,78 @@ const {user}=useContext(AuthContext);
        .catch(error=> console.log(error))  
 
 
-    },[user])
+    },[user]);
+
+
+    const bookingClass=(a)=>{
+
+
+        if(!user){
+        return  toast.error("Please log in before selecting the course")
+
+        }
+
+       
+        const {availableSeats,classImage,className,instructorEmail,instructorImage,instructorName,price,totalStudent,_id}=a;
+
+
+        const selectedInfo={
+            availableSeats,
+            classImage,
+            className,
+            instructorEmail,
+            instructorImage,
+            instructorName,
+            price,
+            totalStudent,
+            bookingId:_id,
+            userEmail:user?.email
+
+        }
+
+        console.log(selectedInfo)
+
+
+        const token = localStorage.getItem('jwt-token')
+
+        fetch(`http://localhost:5000/selectedClasses/${user && user?.email}`, {
+            method: "POST",
+            headers: {
+
+                authorization: `bearer ${token}`,
+
+                'content-type':'application/json'
+            },
+            body: JSON.stringify(selectedInfo)
+        })
+            .then(res => res.json())
+            .then(res => {
+
+                if(res.insertedId){
+
+                    Swal.fire({
+                        title: 'Success',
+                        text: 'user Add successfully',
+                        icon: 'selected success',
+                        confirmButtonText: 'Ok'
+                      })
+    
+                }
+            
+                console.log(res)
+            })
+            .catch(error => console.log(error))
+
+
+
+       
+       };
+
+
+       
+
+
+    
     
 
 
@@ -45,7 +119,7 @@ const {user}=useContext(AuthContext);
 
 {
 
-    allApproveClasses?.map(a=>  <div key={a?._id} style={{border:'1px solid white',boxShadow:'10px 10px 10px black'}} className="card w-full  shadow-xl  btn-outline hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black/60 to-red-500/60
+    allApproveClasses?.map(a=>  <div key={a?._id} style={{border:'1px solid white',boxShadow:'10px 10px 10px black'}} className="card w-full  shadow-xl  btn-outline hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black/60 to-red-500/60 
     duration-[3s]  
 "   >
        <img className='h-[300px] rounded-t-[20px]' src={a?.classImage} alt="Shoes" />
@@ -71,9 +145,9 @@ const {user}=useContext(AuthContext);
 
            </p>
            
-           <button className="btn  btn-outline text-[20px] text-[400] text-white hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-red-500/60 via-black to-red-500/50 hover:border-none" 
+           <button onClick={()=>bookingClass(a)} className="btn  btn-outline text-[20px] text-[400] text-white hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-red-500/60 via-black to-red-500/50 hover:border-none" 
            
-          disabled={ checkingUser?.message === 'admin' || checkingUser?.message === 'instructor'  ? true :false}
+          disabled={ checkingUser?.message === 'admin' || checkingUser?.message === 'instructor' ||a?.availableSeats === 0 ? true :false}
            
            >   
            <BsFillBookmarkCheckFill/> Select</button>
@@ -85,7 +159,7 @@ const {user}=useContext(AuthContext);
 }
 
 
-
+ <ToastContainer />
 
   </div>
 
