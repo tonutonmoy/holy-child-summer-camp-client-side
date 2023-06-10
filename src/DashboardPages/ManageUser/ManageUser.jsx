@@ -127,7 +127,7 @@ const ManageUser = () => {
                                 <td className=" text-center">
                                     <button onClick={()=> makeInstructor(singleUser?.userEmail)} className='btn text-[12px]  btn-sm bg-green-500 text-white hover:text-black'
                                     
-                                    disabled={singleUser.userRoll === 'admin' || singleUser.userRoll === 'instructor' ? true : false }
+                                    disabled={singleUser?.userRoll === 'admin' || singleUser?.userRoll === 'instructor' ? true : false }
                                     
                                     >
                                         Make Instructor
@@ -138,7 +138,7 @@ const ManageUser = () => {
                                 <td   className=" text-center">
                                     <button onClick={()=>makeAdmin(singleUser?.userEmail)}
                                      
-                                     disabled={singleUser.userRoll === 'admin' || singleUser.userRoll === 'instructor' ? true : false }
+                                     disabled={singleUser?.userRoll === 'admin' || singleUser?.userRoll === 'instructor' ? true : false }
 
                                     className="btn  text-[12px] btn-outline btn-sm text-white bg-red-500">
                                         Make Admin

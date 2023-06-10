@@ -76,10 +76,13 @@ const MyClasses = () => {
    
                            </p>
    
-                           <p className=" text-[18px] font-[300] my-5 text-white">
-                               <span className=" font-[400] ">FeedBack: {a?.feedBack}</span>
-   
-                           </p>
+                        {
+
+                            a?.status === 'deny' &&     <p className=" text-[18px] font-[300] my-5 text-white">
+                            <span className=" font-[400] ">FeedBack: {a?.feedBack}</span>
+
+                        </p>
+                        }
    
    
                            <button className="btn w-full btn-outline border-white text-white text-[15px] font-[500]
