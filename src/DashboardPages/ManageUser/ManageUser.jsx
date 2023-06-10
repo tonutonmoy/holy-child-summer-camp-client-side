@@ -1,74 +1,163 @@
 
 
+import { useContext } from "react";
+import useAllUsers from "../../Hooks/useAllUsers";
+import { AuthContext } from "../../Provider/AuthProvider";
+
+
+
 const ManageUser = () => {
+
+
+
+    const [allUsers,refetch]=useAllUsers()
+
+
+       const{user}=useContext(AuthContext)
+
+
+
+  
+
+
+    const makeAdmin=(email)=>{
+
+      
+
+        const token= localStorage.getItem('jwt-token')
+         
+         fetch(`http://localhost:5000/makeAdmin?adminEmail=${user && user?.email}&userEmail=${email}`,{
+            method:"PATCH",
+            headers:{
+                    
+                authorization:`bearer ${token}`
+            }
+         })
+         .then(res=> res.json())
+         .then(res=> {
+            
+            if(res.modifiedCount > 0){
+              
+                refetch()
+            }
+            console.log(res)
+        })
+         .catch(error=> console.log(error))
+         
+
+    }
+
+    const makeInstructor=(email)=>{
+
+      
+
+        const token= localStorage.getItem('jwt-token')
+         
+         fetch(`http://localhost:5000/makeinstructor?adminEmail=${user && user?.email}&userEmail=${email}`,{
+            method:"PATCH",
+            headers:{
+                    
+                authorization:`bearer ${token}`
+            }
+         })
+         .then(res=> res.json())
+         .then(res=> {
+            
+            if(res.modifiedCount > 0){
+               
+                refetch()
+            }
+            console.log(res)
+        })
+         .catch(error=> console.log(error))
+         
+
+    }
+
     return (
         <div className=" w-[90%] mx-auto  ">
 
-<h2 className='text-[33px] font-medium text-center mb-10 '>Manage users </h2>
+            <h2 className='text-[33px] font-medium text-center mb-10 '>Manage users </h2>
 
-        <div className="overflow-x-auto ">
-            <table className="table ">
-                {/* head */}
-                <thead className="  text-white text-[20px] 
+            <div className="overflow-x-auto ">
+                <table className="table ">
+                    {/* head */}
+                    <thead className="  text-white text-[20px] 
              bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r
              
             ">
-                    <tr>
+                        <tr>
 
-                        <th>#</th>
+                            <th>#</th>
 
-                        <th>Image</th>
-                        <th>Name</th>
-                        
-                        <th> Email</th>
-                        <th>Role</th>
-                      
-                        
+                            <th>Image</th>
+                            <th>Name</th>
 
-                       <th className=" text-center">
-                        action
-                       </th>
-                       <th className=" text-center" >
-                        action
-                       </th>
+                            <th className=" text-center"> Email</th>
+                            <th>Role</th>
 
-                      
-                    </tr>
-                </thead>
-                <tbody>
 
-                    <tr className=" text-white text-[15px] font-[400]
+
+                            <th className=" text-center">
+                                action
+                            </th>
+                            <th className=" text-center" >
+                                action
+                            </th>
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {
+
+                            allUsers?.map((singleUser, index) => <tr key={singleUser?._id} className=" text-white text-[15px] font-[400]
                     bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r ">
-                        <td></td>
-                        <td></td>
-                        <td>11</td>
-                        <td>1</td>
-                        <td>1</td>
-                        <td className=" text-center">
-                                <button className='btn text-[12px]  btn-sm bg-green-500 text-white hover:text-black'>
-                                    Make Instructor
-                                </button>
-                            </td>
+                                <td>{index + 1}</td>
+                                <td>
+                                    <div className="mask mask-squircle w-12 h-12">
+                                        <img src={singleUser?.userPhoto} />
+                                    </div>
+
+                                </td>
+                                <td>{singleUser?.userName}</td>
+                                <td>{singleUser?.userEmail}</td>
+                                <td>{singleUser?.userRoll}</td>
+                                <td className=" text-center">
+                                    <button onClick={()=> makeInstructor(singleUser?.userEmail)} className='btn text-[12px]  btn-sm bg-green-500 text-white hover:text-black'
+                                    
+                                    disabled={singleUser.userRoll === 'admin' || singleUser.userRoll === 'instructor' ? true : false }
+                                    
+                                    >
+                                        Make Instructor
+                                    </button>
+                                </td>
 
 
-                            <td className=" text-center">
-                                <button className="btn  text-[12px] btn-outline btn-sm text-white bg-red-500">
-                                 Make Admin
-                                </button>
-                            </td>
-                      
-                      
+                                <td   className=" text-center">
+                                    <button onClick={()=>makeAdmin(singleUser?.userEmail)}
+                                     
+                                     disabled={singleUser.userRoll === 'admin' || singleUser.userRoll === 'instructor' ? true : false }
 
-
-                    
-                    </tr>
-                </tbody>
+                                    className="btn  text-[12px] btn-outline btn-sm text-white bg-red-500">
+                                        Make Admin
+                                    </button>
+                                </td>
 
 
 
-            </table>
+
+
+                            </tr>)
+                        }
+                    </tbody>
+
+
+
+                </table>
+            </div>
         </div>
-    </div>
 
     );
 };

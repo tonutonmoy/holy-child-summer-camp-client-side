@@ -15,7 +15,7 @@ const MyClasses = () => {
 
 
 
-      const { refetch,  data: allData=[] } = useQuery({
+      const {   data: allData=[] } = useQuery({
         queryKey: ['allClassesByInstructor',user?.email],
         enabled: ! loading,
         queryFn: async ()=>{

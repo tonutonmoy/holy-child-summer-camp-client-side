@@ -2,11 +2,14 @@ import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import Swal from "sweetalert2";
+import useAllClassesData from "../../Hooks/useAllClassesData";
 
 
 const AddAClass = () => {
 
     const {user}=useContext(AuthContext);
+
+     const [,refetch] = useAllClassesData()
 
     const [axiosSecure]=useAxiosSecure();
 
@@ -57,6 +60,8 @@ const AddAClass = () => {
                   })
 
                   e.target.reset()
+
+                  refetch()
             }
 
             console.log(res.data)})
