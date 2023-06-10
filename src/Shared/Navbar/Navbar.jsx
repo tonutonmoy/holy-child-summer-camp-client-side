@@ -1,7 +1,24 @@
 import { Link } from "react-router-dom";
 import logo from '../../assets/logo/preview-school-logo-free-vector-design-1625727716.jpg'
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
+
+    const { user, logOut } = useContext(AuthContext);
+
+
+    const logOutHandler = () => {
+
+        logOut()
+            .then(() => {
+                toast.success("LogOut successfully");
+            })
+            .catch(error => console.log(error))
+    }
 
     const navItem = <>
 
@@ -15,21 +32,41 @@ const Navbar = () => {
         <li>
             <Link className=" text-[20px] font-[500] p-3 mx-3 md:text-white" to='/classes'> Classes</Link>
         </li>
-        <li>
-            <Link className=" text-[20px] font-[500] p-3 mx-3 md:text-white" to='/dashboard'> Dashboard </Link>
-        </li>
 
-        <li>
-            <Link className=" text-[20px] font-[500] p-3 mx-3 md:text-white" to='/login'> Login </Link>
-        </li>
-        <li>
-            <img className="" src='' alt="" />
-        </li>
-        <li>
-            <button className=" btn-ghost text-[20px] font-[500] p-3 mx-3 text-white  ">Logout</button>
 
-        </li>
+        {
+            user ? <>
 
+                <li>
+                    <Link className=" text-[20px] font-[500] p-3 mx-3 md:text-white" to='/dashboard'> Dashboard </Link>
+                </li>
+
+                <li>
+
+                    <div className="avatar flex  items-center" title={user?.displayName}>
+                        <div className="md:w-[50px] md:h-[50px] w-[50px] h-[40px] border-4  rounded-full border-white">
+                            <img src={user?.photoURL} />
+                        </div>
+                    </div>
+
+                </li>
+                <li>
+                    <button onClick={logOutHandler} className=" btn-ghost text-[20px] font-[500] p-3 mx-3 text-white  ">Logout</button>
+
+                </li>
+
+
+
+
+            </>
+
+                : <li>
+                    <Link className=" text-[20px] font-[500] p-3 mx-3 md:text-white" to='/login'> Login </Link>
+                </li>
+
+
+
+        }
 
     </>
     return (
@@ -49,16 +86,16 @@ const Navbar = () => {
                     </div>
                     <div className="flex items-center space-x-10">
                         <h2 className=" md:text-[30px] md:font-[500] text-white ">Holy child school</h2>
-                     <img className="md:w-[70px] md:h-[70px] w-[40px] h-[40px] border-4  rounded-full border-white" src={logo} alt="" />
+                        <img className="md:w-[70px] md:h-[70px] w-[40px] h-[40px] border-4  rounded-full border-white" src={logo} alt="" />
                     </div>
 
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu menu-horizontal px-1 items-center">
                         {navItem}
                     </ul>
                 </div>
-
+                <ToastContainer />
             </div>
         </div>
     );
