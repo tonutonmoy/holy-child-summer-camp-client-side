@@ -14,6 +14,7 @@ import ManageClasses from "../DashboardPages/ManageClasses/ManageClasses";
 import ManageUser from "../DashboardPages/ManageUser/ManageUser";
 import PaymentHistory from "../DashboardPages/PaymentHistory/PaymentHistory";
 import PaymentPage from "../DashboardPages/PaymentPage/PaymentPage";
+import PrivateRoute from "../PrivateRouts/PrivateRoute";
 
 
 const router = createBrowserRouter([
@@ -59,44 +60,60 @@ const router = createBrowserRouter([
       {
 
         path: 'mySelectedClasses',
-        element: <MySelectedClasses></MySelectedClasses>
+        element: <PrivateRoute>
+          <MySelectedClasses></MySelectedClasses>
+        </PrivateRoute>
       },
 
       {
 
         path: 'MyEnrolledClasses',
-        element: <MyEnrolledClasses></MyEnrolledClasses>
+        element: <PrivateRoute>
+          <MyEnrolledClasses></MyEnrolledClasses>
+        </PrivateRoute>
       },
 
       {
 
         path: 'paymentHistory',
-        element: <PaymentHistory></PaymentHistory>
+        element: <PrivateRoute>
+          <PaymentHistory></PaymentHistory>
+        </PrivateRoute>
       },
       {
 
         path: 'addAClass',
-        element: <AddAClass></AddAClass>
+        element: <PrivateRoute>
+          <AddAClass></AddAClass>
+        </PrivateRoute>
       },
       {
 
         path: 'myClasses',
-        element: <MyClasses></MyClasses>
+        element: <PrivateRoute>
+          <MyClasses></MyClasses>
+        </PrivateRoute>
       },
       {
 
         path: 'manageClasses',
-        element: <ManageClasses></ManageClasses>
+        element: <PrivateRoute>
+          <ManageClasses></ManageClasses>
+        </PrivateRoute>
       },
       {
 
         path: 'manageUsers',
-        element:<ManageUser></ManageUser>
+        element:<PrivateRoute>
+          <ManageUser></ManageUser>
+        </PrivateRoute>
       },
       {
 
         path: 'paymentPage/:id',
-        element:<PaymentPage></PaymentPage>
+        element:
+          <PaymentPage></PaymentPage>
+        
       }
 
     ]
