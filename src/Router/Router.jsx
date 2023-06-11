@@ -15,6 +15,7 @@ import ManageUser from "../DashboardPages/ManageUser/ManageUser";
 import PaymentHistory from "../DashboardPages/PaymentHistory/PaymentHistory";
 import PaymentPage from "../DashboardPages/PaymentPage/PaymentPage";
 import PrivateRoute from "../PrivateRouts/PrivateRoute";
+import NotFound from "../NotFound/NotFound";
 
 
 const router = createBrowserRouter([
@@ -117,6 +118,10 @@ const router = createBrowserRouter([
       }
 
     ]
+  },
+  {
+    path:'*',
+    element:<NotFound></NotFound>
   }
 ]);
 

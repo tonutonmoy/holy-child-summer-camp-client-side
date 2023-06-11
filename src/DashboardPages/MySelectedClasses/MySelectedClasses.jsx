@@ -134,15 +134,15 @@ const MySelectedClasses = () => {
 
 
                                 <td>
-                                    <button className='btn btn-sm bg-green-500 text-white hover:text-black'>
-                                       <Link to={`/dashboard/paymentPage/${data?._id}`}> <MdPayment /></Link>
-                                    </button>
+                                   
+                                       <Link className='btn btn-sm bg-green-500 text-white hover:text-black'to={`/dashboard/paymentPage/${data?._id}`}> <MdPayment c /></Link>
+                                    
                                 </td>
 
 
-                                <td>
-                                    <button onClick={() => deleteHandler(data?._id)} className="btn btn-circle btn-outline btn-sm text-white bg-red-500">
-                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                                <td >
+                                    <button onClick={() => deleteHandler(data?._id)} className="btn btn-circle btn-outline btn-sm text-white bg-red-500 ">
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
                                     </button>
                                 </td>
                             </tr>)
