@@ -119,9 +119,9 @@ const {user}=useContext(AuthContext);
 
 {
 
-    allApproveClasses?.map(a=>  <div key={a?._id} style={{border:'1px solid white',boxShadow:'10px 10px 10px black'}} className="card w-full  shadow-xl  btn-outline hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black/60 to-red-500/60 
+    allApproveClasses?.map(a=>  <div key={a?._id} style={{border:'1px solid white',boxShadow:'10px 10px 10px black'}} className={`card w-full  shadow-xl  btn-outline ${a?.availableSeats===0 ? 'bg-red-900 hover:bg-red-900':'hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black/60 to-red-500/60 '} 
     duration-[3s]  
-"   >
+`}   >
        <img className='h-[300px] rounded-t-[20px]' src={a?.classImage} alt="Shoes" />
       
        <div className="card-body">
@@ -150,7 +150,7 @@ const {user}=useContext(AuthContext);
           disabled={ checkingUser?.message === 'admin' || checkingUser?.message === 'instructor' ||a?.availableSeats === 0 ? true :false}
            
            >   
-           <BsFillBookmarkCheckFill/> Select</button>
+           <BsFillBookmarkCheckFill/>{a?.availableSeats===0?'Not available':  "Select" }</button>
         
 
        </div>

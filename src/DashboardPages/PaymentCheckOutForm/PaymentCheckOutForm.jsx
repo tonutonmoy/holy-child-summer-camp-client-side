@@ -20,7 +20,7 @@ const PaymentCheckOutForm = ({selectedClass}) => {
     const [,refetch]=useAllClassesData()
 
    
-    const {price,bookingId,className,instructorName,classImage,_id}=selectedClass;
+    const {price,bookingId,className,instructorName,classImage,_id,instructorEmail,instructorImage}=selectedClass;
 
   
 console.log(selectedClass)
@@ -111,7 +111,9 @@ console.log(selectedClass)
                 className,
                 instructorName,
                 payment:'done',
-                classImage
+                classImage,
+                instructorEmail,
+                instructorImage
                 
               
 

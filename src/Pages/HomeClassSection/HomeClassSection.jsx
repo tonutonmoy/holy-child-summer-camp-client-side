@@ -16,7 +16,6 @@ const [data,setData]=useState()
     },[])
     
 
-    console.log(data)
     return (
 
         <div className='my-40' >
@@ -26,11 +25,11 @@ const [data,setData]=useState()
 
 
 {
-    data?.map(a=>
+    data?.slice(0,6).map(a=>
         <div key={a?._id} style={{border:'1px solid white',boxShadow:"10px 10px 10px black"}} className="card w-full  shadow-xl  btn-outline hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black650 to-red-500/60
          duration-[3s] 
   " >
-            <img className='w-full h-[300px] rounded-t-[17px]' src={a?.classImage} alt="Shoes" />
+            <img className='w-full h-[300px] rounded-t-[17px]' src={a?.classImage}  />
             <div className="card-body">
             <p className=" text-[18px] font-[300] my-3 text-white">
                     <span className=" font-[500] ">Class name:</span> {a?.className} 
