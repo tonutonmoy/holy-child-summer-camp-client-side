@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react';
 import './HomeInstructorsSection.css'
 
+
+import { motion } from "framer-motion"
+
 const HomeInstructorsSection = () => {
 
     const [data,setData]=useState()
@@ -27,29 +30,29 @@ const HomeInstructorsSection = () => {
 
            {
 
-            data?.slice(0,6).map(a=>     <div key={a?._id} style={{border:'1px solid white',boxShadow:"10px 10px 10px black"}} className="card w-full  shadow-xl  btn-outline hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black/60 to-red-500/60
+            data?.slice(0,6).map(a=>     <motion.div animate={{scale:0.9}} key={a?._id} style={{border:'1px solid white',boxShadow:"10px 10px 10px black"}} className="card w-full  shadow-xl  btn-outline hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black/60 to-red-500/60
             duration-[3s]  ">
-               <img className='w-full h-[300px] rounded-t-[17px]' src={a?.instructorImage}/>
-               <div className="card-body">
-               <p className=" text-[18px] font-[300] my-5 text-white">
+               < img className='w-full h-[300px] rounded-t-[17px]  ' src={a?.instructorImage}/>
+               <div   className="card-body ">
+               <motion.p animate={{rotate:360}} className=" text-[18px] font-[300] my-3 text-white duration-[3s]">
                        <span className=" font-[400] ">Instructor name:</span> {a?.instructorName} 
 
-                   </p>
+                       </motion.p>
 
-                   <p className=" text-[18px] font-[300] my-5 text-white">
+                   <motion.p animate={{rotate:360}} className=" text-[18px] font-[300] my-3 text-white duration-[3s]">
                        <span className=" font-[400] ">Instructor Email:</span> {a?.instructorEmail} 
 
-                   </p>
+                       </motion.p>
                  
                  
-                   <p className=" text-[18px] font-[300] my-5 text-white">
+                   <motion.p animate={{rotate:360}} className=" text-[18px] font-[300] my-3 text-white duration-[3s]">
                        <span className=" font-[400] ">Total enrolled:</span> {a?.totalEnroll} 
 
-                   </p>
+                       </motion.p>
                 
 
                </div>
-           </div>
+           </motion.div>
 )
            }
 

@@ -18,6 +18,8 @@ const AuthProvider = ({ children }) => {
 
     const [loading, setLoading] = useState(true);
 
+    const [toggle,setToggle]=useState(false);
+
 
 
     const createUser = (email, password) => {
@@ -119,7 +121,9 @@ const AuthProvider = ({ children }) => {
         login,
         logOut,
         updateUserProfile,
-        googleLogin
+        googleLogin,
+        toggle,
+        setToggle
     }
 
     return (

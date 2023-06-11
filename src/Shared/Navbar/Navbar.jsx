@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
 
-    const { user, logOut } = useContext(AuthContext);
+    const { user, logOut,setToggle,toggle } = useContext(AuthContext);
 
     const navigate=useNavigate()
 
@@ -20,7 +20,9 @@ const Navbar = () => {
                 navigate('/')
             })
             .catch(error => console.log(error))
-    }
+    };
+
+    
 
     const navItem = <>
 
@@ -69,6 +71,10 @@ const Navbar = () => {
 
 
         }
+
+        <li className="rounded-[20px] bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black via-black to-red-500  " style={{border:"2px solid white"}}>
+        <button onClick={()=> setToggle(!toggle)} className=" text-[15px] font-[500] text-white ">{toggle===true?'Light':'Dark'}</button>
+        </li>
 
     </>
     return (

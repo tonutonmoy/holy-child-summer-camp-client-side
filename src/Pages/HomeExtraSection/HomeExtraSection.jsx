@@ -12,18 +12,20 @@ import img7 from '../../assets/photoSection/pexels-pavel-danilyuk-7520987.jpg'
 import img8 from '../../assets/photoSection/pexels-sam-lin-11425205.jpg'
 import img9 from '../../assets/photoSection/pexels-yan-krukau-8190045.jpg'
 
-
+import { motion } from "framer-motion"
 
 const HomeExtraSection = () => {
     return (
-        <div className='my-40'>
+        <div className='mt-40 pb-40'>
              <h2 className='text-[40px] font-medium text-center my-20'> photo from previous Summer Camps </h2>
 
 
              <div className=' grid grid-cols-3 w-[90%]  gap-10  mx-auto '>
 
 
-             <div className='w-full  h-[500px]  bg-black photo-div  border   hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black650 to-red-500/60
+             <div
+            
+             className='w-full  h-[500px]  bg-black photo-div  border   hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black650 to-red-500/60
                   '>
 
                 <img className='w-full h-full p-5  rounded-[30%] border border-white  hover:scale-90 duration-[1s] ' src={img1} alt="" />
