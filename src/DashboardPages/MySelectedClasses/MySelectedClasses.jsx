@@ -3,6 +3,7 @@ import useSelectedClassesAll from '../../Hooks/useSelectedClassesAll';
 import { AuthContext } from '../../Provider/AuthProvider';
 import { useContext } from 'react';
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 const MySelectedClasses = () => {
 
@@ -22,7 +23,7 @@ const MySelectedClasses = () => {
 
         const token = localStorage.getItem('jwt-token')
 
-        console.log(user?.email, 'bal')
+       
 
 
         Swal.fire({
@@ -134,7 +135,7 @@ const MySelectedClasses = () => {
 
                                 <td>
                                     <button className='btn btn-sm bg-green-500 text-white hover:text-black'>
-                                        <MdPayment />
+                                       <Link to={`/dashboard/paymentPage/${data?._id}`}> <MdPayment /></Link>
                                     </button>
                                 </td>
 

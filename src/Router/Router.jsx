@@ -13,6 +13,7 @@ import MyClasses from "../DashboardPages/MyClasses/MyClasses";
 import ManageClasses from "../DashboardPages/ManageClasses/ManageClasses";
 import ManageUser from "../DashboardPages/ManageUser/ManageUser";
 import PaymentHistory from "../DashboardPages/PaymentHistory/PaymentHistory";
+import PaymentPage from "../DashboardPages/PaymentPage/PaymentPage";
 
 
 const router = createBrowserRouter([
@@ -91,6 +92,11 @@ const router = createBrowserRouter([
 
         path: 'manageUsers',
         element:<ManageUser></ManageUser>
+      },
+      {
+
+        path: 'paymentPage/:id',
+        element:<PaymentPage></PaymentPage>
       }
 
     ]
