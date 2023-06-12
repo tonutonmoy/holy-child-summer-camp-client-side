@@ -24,7 +24,7 @@ const HomeInstructorsSection = () => {
             
 
             <h2 className='text-[40px] font-medium text-center my-10'> Popular Instructors </h2>
-            <div className="instructor-section grid md:grid-cols-3 gap-10 w-[90%] mx-auto  bg-fixed py-40 md:justify-start px-10 rounded-[30px]" >
+            <div className="instructor-section grid md:grid-cols-3 gap-10 w-[90%] mx-auto  bg-fixed py-40 md:justify-start rounded-[30px]" >
 
 
 

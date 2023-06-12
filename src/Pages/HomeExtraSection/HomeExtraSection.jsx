@@ -12,7 +12,7 @@ import img7 from '../../assets/photoSection/pexels-pavel-danilyuk-7520987.jpg'
 import img8 from '../../assets/photoSection/pexels-sam-lin-11425205.jpg'
 import img9 from '../../assets/photoSection/pexels-yan-krukau-8190045.jpg'
 
-import { motion } from "framer-motion"
+
 
 const HomeExtraSection = () => {
     return (
@@ -20,7 +20,7 @@ const HomeExtraSection = () => {
              <h2 className='text-[40px] font-medium text-center my-20'> photo from previous Summer Camps </h2>
 
 
-             <div className=' grid grid-cols-3 w-[90%]  gap-10  mx-auto '>
+             <div className=' grid md:grid-cols-3 w-[90%]  gap-10  mx-auto '>
 
 
              <div

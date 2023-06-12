@@ -37,23 +37,23 @@ const HomeBanner = () => {
 
                         <img className="w-full h-[700px]" src={img3} alt="" />
 
-                        <div className=" absolute bottom-[5%]  z-10">
+                        <div className=" absolute md:left-[7%] bottom-[5%]  z-10">
 
                            
                          
                           
-                            <h2 className=" text-[60px] font-medium text-white text-center my-5
+                            <h2 className="  text-[20px] md:text-[40px] font-medium text-white text-center my-5
                             
                             ">
                                 2023 Music Explorers Summer Camp </h2>
 
-                            <p className=" text-[30px] text-white font-[50] text-center "> Music Camps for All Skill Levels, Ages 4-18</p>
+                            <p className=" md:text-[30px] text-white font-[50] text-center "> Music Camps for All Skill Levels, Ages 4-18</p>
 
-                            <p className=" text-[30px]  text-white font-[50] text-center  ">Online Registration Now</p>
+                            <p className=" md:text-[30px]  text-white font-[50] text-center  ">Online Registration Now</p>
 
 
                             <div className=" flex justify-center my-5">
-                                <p className=" text-[18px]  text-white font-[50] text-center w-[50%] ">Summer music camps at Asheville Music School are a great way to begin your musical journey, enhance your skills, or even try a new instrument. We have camps for ages 4-18 – Rock and Pop Music Camps, Ukulele Camp, Song Circle Voice Camp, Appalachian Music, and even a Harry Potter-themed strings camp. Students will learn music in a fun, supportive, team-oriented environment in small or large groups. Cost: $195-$360. Email info@ashevillemusicschool.org for more info.</p>
+                                <p className=" text-[18px]  text-white font-[50] text-center w-[50%] ">Summer music camps at Asheville Music School are a great way to begin your musical journey, enhance your skills, or even try a new instrument. </p>
                             </div>
 
 
@@ -76,23 +76,23 @@ const HomeBanner = () => {
 
                         <img className="w-full h-[700px]" src={img1} alt="" />
 
-                        <div className=" absolute bottom-[5%]  z-10">
+                        <div className=" absolute md:left-[7%] bottom-[5%]  z-10">
 
                            
                          
                           
-                            <h2 className=" text-[60px] font-medium text-white text-center my-5
+                            <h2 className="  text-[20px] md:text-[40px] font-medium text-white text-center my-5
                             
                             ">
                                 2023 Music Explorers Summer Camp </h2>
 
-                            <p className=" text-[30px] text-white font-[50] text-center "> Music Camps for All Skill Levels, Ages 4-18</p>
+                            <p className=" md:text-[30px] text-white font-[50] text-center "> Music Camps for All Skill Levels, Ages 4-18</p>
 
-                            <p className=" text-[30px]  text-white font-[50] text-center  ">Online Registration Now</p>
+                            <p className=" md:text-[30px]  text-white font-[50] text-center  ">Online Registration Now</p>
 
 
                             <div className=" flex justify-center my-5">
-                                <p className=" text-[18px]  text-white font-[50] text-center w-[50%] ">Summer music camps at Asheville Music School are a great way to begin your musical journey, enhance your skills, or even try a new instrument. We have camps for ages 4-18 – Rock and Pop Music Camps, Ukulele Camp, Song Circle Voice Camp, Appalachian Music, and even a Harry Potter-themed strings camp. Students will learn music in a fun, supportive, team-oriented environment in small or large groups. Cost: $195-$360. Email info@ashevillemusicschool.org for more info.</p>
+                                <p className=" text-[18px]  text-white font-[50] text-center w-[50%] ">Summer music camps at Asheville Music School are a great way to begin your musical journey, enhance your skills, or even try a new instrument.</p>
                             </div>
 
 
@@ -115,23 +115,23 @@ const HomeBanner = () => {
 
                         <img className="w-full h-[700px]" src={img2} alt="" />
 
-                        <div className=" absolute bottom-[5%]  z-10">
+                        <div className=" absolute md:left-[7%] bottom-[5%]  z-10">
 
                            
                          
                           
-                            <h2 className=" text-[60px] font-medium text-white text-center my-5
+                            <h2 className="  text-[20px] md:text-[40px] font-medium text-white text-center my-5
                             
                             ">
                                 2023 Music Explorers Summer Camp </h2>
 
-                            <p className=" text-[30px] text-white font-[50] text-center "> Music Camps for All Skill Levels, Ages 4-18</p>
+                            <p className=" md:text-[30px] text-white font-[50] text-center "> Music Camps for All Skill Levels, Ages 4-18</p>
 
-                            <p className=" text-[30px]  text-white font-[50] text-center  ">Online Registration Now</p>
+                            <p className=" md:text-[30px]  text-white font-[50] text-center  ">Online Registration Now</p>
 
 
                             <div className=" flex justify-center my-5">
-                                <p className=" text-[18px]  text-white font-[50] text-center w-[50%] ">Summer music camps at Asheville Music School are a great way to begin your musical journey, enhance your skills, or even try a new instrument. We have camps for ages 4-18 – Rock and Pop Music Camps, Ukulele Camp, Song Circle Voice Camp, Appalachian Music, and even a Harry Potter-themed strings camp. Students will learn music in a fun, supportive, team-oriented environment in small or large groups. Cost: $195-$360. Email info@ashevillemusicschool.org for more info.</p>
+                                <p className=" text-[18px]  text-white font-[50] text-center w-[50%] ">Summer music camps at Asheville Music School are a great way to begin your musical journey, enhance your skills, or even try a new instrument.</p>
                             </div>
 
 
@@ -156,23 +156,23 @@ const HomeBanner = () => {
 
                         <img className="w-full h-[700px]" src={img4} alt="" />
 
-                        <div className=" absolute bottom-[5%]  z-10">
+                        <div className=" absolute md:left-[7%] bottom-[5%]  z-10">
 
                            
                          
                           
-                            <h2 className=" text-[60px] font-medium text-white text-center my-5
+                            <h2 className="  text-[20px] md:text-[40px] font-medium text-white text-center my-5
                             
                             ">
                                 2023 Music Explorers Summer Camp </h2>
 
-                            <p className=" text-[30px] text-white font-[50] text-center "> Music Camps for All Skill Levels, Ages 4-18</p>
+                            <p className=" md:text-[30px] text-white font-[50] text-center "> Music Camps for All Skill Levels, Ages 4-18</p>
 
-                            <p className=" text-[30px]  text-white font-[50] text-center  ">Online Registration Now</p>
+                            <p className=" md:text-[30px]  text-white font-[50] text-center  ">Online Registration Now</p>
 
 
                             <div className=" flex justify-center my-5">
-                                <p className=" text-[18px]  text-white font-[50] text-center w-[50%] ">Summer music camps at Asheville Music School are a great way to begin your musical journey, enhance your skills, or even try a new instrument. We have camps for ages 4-18 – Rock and Pop Music Camps, Ukulele Camp, Song Circle Voice Camp, Appalachian Music, and even a Harry Potter-themed strings camp. Students will learn music in a fun, supportive, team-oriented environment in small or large groups. Cost: $195-$360. Email info@ashevillemusicschool.org for more info.</p>
+                                <p className=" text-[18px]  text-white font-[50] text-center w-[50%] ">Summer music camps at Asheville Music School are a great way to begin your musical journey, enhance your skills, or even try a new instrument.</p>
                             </div>
 
 
