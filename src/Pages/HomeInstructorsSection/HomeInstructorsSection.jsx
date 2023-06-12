@@ -9,7 +9,7 @@ const HomeInstructorsSection = () => {
     const [data,setData]=useState()
     useEffect(()=>{
 
-        fetch('http://localhost:5000/topInstructor')
+        fetch('https://holy-child-summer-camp-server-side.vercel.app/topInstructor')
         .then(res=> res.json())
         .then(res=> setData(res) )
 

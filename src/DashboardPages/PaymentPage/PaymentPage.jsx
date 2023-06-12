@@ -23,7 +23,7 @@ const PaymentPage = () => {
     useEffect(() => {
 
 
-        fetch(`http://localhost:5000/SelectedSingleClass?userEmail=${user && user?.email}&id=${id}`, {
+        fetch(`https://holy-child-summer-camp-server-side.vercel.app/SelectedSingleClass?userEmail=${user && user?.email}&id=${id}`, {
             method: "GET",
             headers: {
 

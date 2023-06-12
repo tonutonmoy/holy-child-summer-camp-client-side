@@ -7,7 +7,7 @@ const InstructorPage = () => {
 
     useEffect(()=>{
 
-       fetch('http://localhost:5000/allInstructors')
+       fetch('https://holy-child-summer-camp-server-side.vercel.app/allInstructors')
        .then(res=> res.json())
        .then(res=> setAllInstructors(res))
        .catch(error=> console.log(error))  

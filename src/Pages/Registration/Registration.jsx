@@ -69,7 +69,7 @@ const Registration = () => {
                         
                         console.log(userInformation)
 
-                        fetch(`http://localhost:5000/allUsers/${email}`,{
+                        fetch(`https://holy-child-summer-camp-server-side.vercel.app/allUsers/${email}`,{
                             method:"POST",
                             headers:{
                                 'content-type':'application/json'
@@ -124,7 +124,7 @@ const Registration = () => {
                     console.log(userInformation)
 
 
-                    fetch(`http://localhost:5000/allUsers/${res?.user?.email}`,{
+                    fetch(`https://holy-child-summer-camp-server-side.vercel.app/allUsers/${res?.user?.email}`,{
                         method:"POST",
                         headers:{
                             'content-type':'application/json'
@@ -241,14 +241,14 @@ const Registration = () => {
 
 
 
-                                <p className='my-3'> All ready account? <Link className=' text-orange-400' to='/login'>please login</Link> </p>
+                                <p className='my-3'> All ready account? <Link className=' text-orange-400' to='/login'>please login </Link> </p>
 
 
 
                                 <div className="form-control mt-6">
                                     <button className="btn text-[15px] 
                                     bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-white via-sky-500 to-sky-500
-                                   ">Login</button>
+                                   ">Registration</button>
                                 </div>
 
                                 <div className="divider my-8">OR</div>

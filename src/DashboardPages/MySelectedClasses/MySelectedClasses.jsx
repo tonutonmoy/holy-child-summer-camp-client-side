@@ -41,7 +41,7 @@ const MySelectedClasses = () => {
 
 
 
-                fetch(`http://localhost:5000/deleteSelectedClass?userEmail=${user && user?.email}&id=${id}`, {
+                fetch(`https://holy-child-summer-camp-server-side.vercel.app/deleteSelectedClass?userEmail=${user && user?.email}&id=${id}`, {
                     method: "DELETE",
                     headers: {
 

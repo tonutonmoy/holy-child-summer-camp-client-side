@@ -17,7 +17,7 @@ const PaymentHistory = () => {
     useEffect(() => {
 
 
-        fetch(`http://localhost:5000/mayPaymentHistory/${user?.email}`, {
+        fetch(`https://holy-child-summer-camp-server-side.vercel.app/mayPaymentHistory/${user?.email}`, {
             method: "GET",
             headers: {
 

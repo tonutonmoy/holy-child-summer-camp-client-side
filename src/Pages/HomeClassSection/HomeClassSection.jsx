@@ -10,7 +10,7 @@ const HomeClassSection = () => {
 const [data,setData]=useState()
     useEffect(()=>{
 
-        fetch('http://localhost:5000/homedata')
+        fetch('https://holy-child-summer-camp-server-side.vercel.app/homedata')
         .then(res=> res.json())
         .then(res=> setData(res) )
 

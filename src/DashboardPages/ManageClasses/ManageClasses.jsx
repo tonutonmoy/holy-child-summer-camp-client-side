@@ -36,7 +36,7 @@ const ManageClasses = () => {
 
 
 
-        fetch(`http://localhost:5000/approveClasses?adminEmail=${user && user?.email}&userId=${id}`, {
+        fetch(`https://holy-child-summer-camp-server-side.vercel.app/approveClasses?adminEmail=${user && user?.email}&userId=${id}`, {
             method: "PATCH",
             headers: {
 
@@ -65,7 +65,7 @@ const ManageClasses = () => {
 
 
 
-        fetch(`http://localhost:5000/denyClasses?adminEmail=${user && user?.email}&userId=${id}`, {
+        fetch(`https://holy-child-summer-camp-server-side.vercel.app/denyClasses?adminEmail=${user && user?.email}&userId=${id}`, {
             method: "PATCH",
             headers: {
 
@@ -101,7 +101,7 @@ const ManageClasses = () => {
 
 
 
-        fetch(`http://localhost:5000/feedBack?adminEmail=${user && user?.email}&userId=${userId}`, {
+        fetch(`https://holy-child-summer-camp-server-side.vercel.app/feedBack?adminEmail=${user && user?.email}&userId=${userId}`, {
             method: "PATCH",
             headers: {
 

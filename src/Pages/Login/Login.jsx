@@ -59,7 +59,7 @@ const Login = () => {
                 console.log(userInformation)
 
 
-                fetch(`http://localhost:5000/allUsers/${res?.user?.email}`,{
+                fetch(`https://holy-child-summer-camp-server-side.vercel.app/allUsers/${res?.user?.email}`,{
                     method:"POST",
                     headers:{
                         'content-type':'application/json'

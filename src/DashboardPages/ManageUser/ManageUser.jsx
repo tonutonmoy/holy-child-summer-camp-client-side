@@ -26,7 +26,7 @@ const ManageUser = () => {
 
         const token= localStorage.getItem('jwt-token')
          
-         fetch(`http://localhost:5000/makeAdmin?adminEmail=${user && user?.email}&userEmail=${email}`,{
+         fetch(`https://holy-child-summer-camp-server-side.vercel.app/makeAdmin?adminEmail=${user && user?.email}&userEmail=${email}`,{
             method:"PATCH",
             headers:{
                     
@@ -53,7 +53,7 @@ const ManageUser = () => {
 
         const token= localStorage.getItem('jwt-token')
          
-         fetch(`http://localhost:5000/makeinstructor?adminEmail=${user && user?.email}&userEmail=${email}`,{
+         fetch(`https://holy-child-summer-camp-server-side.vercel.app/makeinstructor?adminEmail=${user && user?.email}&userEmail=${email}`,{
             method:"PATCH",
             headers:{
                     

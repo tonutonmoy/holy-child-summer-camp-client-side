@@ -15,7 +15,7 @@ const MyEnrolledClasses = () => {
     useEffect(() => {
 
 
-        fetch(`http://localhost:5000/enrollClasses/${user?.email}`, {
+        fetch(`https://holy-child-summer-camp-server-side.vercel.app/enrollClasses/${user?.email}`, {
             method: "GET",
             headers: {
 

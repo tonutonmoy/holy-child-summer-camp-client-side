@@ -23,7 +23,7 @@ const Dashboard = () => {
     useEffect(() => {
 
 
-        fetch(`http://localhost:5000/allUsersRol/${user && user?.email}`, {
+        fetch(`https://holy-child-summer-camp-server-side.vercel.app/allUsersRol/${user && user?.email}`, {
             method: "GET",
             headers: {
 

@@ -15,7 +15,7 @@ const {user}=useContext(AuthContext);
 
     useEffect(()=>{
 
-       fetch('http://localhost:5000/allApproveClasses')
+       fetch('https://holy-child-summer-camp-server-side.vercel.app/allApproveClasses')
        .then(res=> res.json())
        .then(res=> setAllApproveClasses(res))
        .catch(error=> console.log(error))  
@@ -25,7 +25,7 @@ const {user}=useContext(AuthContext);
 
     useEffect(()=>{
 
-       fetch(`http://localhost:5000/checkingUser/${user?.email}`)
+       fetch(`https://holy-child-summer-camp-server-side.vercel.app/checkingUser/${user?.email}`)
        .then(res=> res.json())
        .then(res=> setCheckingUser(res))
        .catch(error=> console.log(error))  
@@ -65,7 +65,7 @@ const {user}=useContext(AuthContext);
 
         const token = localStorage.getItem('jwt-token')
 
-        fetch(`http://localhost:5000/selectedClasses/${user && user?.email}`, {
+        fetch(`https://holy-child-summer-camp-server-side.vercel.app/selectedClasses/${user && user?.email}`, {
             method: "POST",
             headers: {
 
