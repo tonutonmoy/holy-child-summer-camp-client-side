@@ -8,10 +8,10 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 
 
-import img1 from '../../assets/homeBanner/pexels-pavel-danilyuk-7520930.jpg'
-import img2 from '../../assets/homeBanner/pexels-rdne-stock-project-8363027.jpg'
-import img3 from '../../assets/homeBanner/pexels-roxanne-minnish-4513456.jpg'
-import img4 from '../../assets/homeBanner/pexels-turkan-bakirli-16999360.jpg'
+import img1 from '../../assets/homeBanner/pexels-pavel-danilyuk-7520930-min.jpg'
+import img2 from '../../assets/homeBanner/pexels-rdne-stock-project-8363027-min.jpg'
+import img3 from '../../assets/homeBanner/pexels-roxanne-minnish-4513456-min.jpg'
+import img4 from '../../assets/homeBanner/pexels-turkan-bakirli-16999360-min.jpg'
 
 const HomeBanner = () => {
 
