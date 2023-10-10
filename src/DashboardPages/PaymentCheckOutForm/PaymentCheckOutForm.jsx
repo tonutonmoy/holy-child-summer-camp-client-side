@@ -154,12 +154,12 @@ console.log(selectedClass)
 
         <>
 
-            <form style={{ boxShadow: "10px 10px 10px black", borderRadius: "30px", border: "1px solid white" }} className=' p-10 w-[70%] mt-20 bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r ' onSubmit={handleSubmit}>
+            <form style={{ boxShadow: "10px 10px 10px black", borderRadius: "30px", border: "1px solid white" }} className='mb-[50px]  p-10 w-[95%] h-[200px] md:w-[50%] lg:w-[50%] xl:w-[50%] 2xl:w-[50%] mt-20 bg-gradient-to-b  from-gray-900 to-gray-600 bg-gradient-to-r ' onSubmit={handleSubmit}>
                 <CardElement
                     options={{
                         style: {
                             base: {
-                                fontSize: '16px',
+                                fontSize: '14px ',
                                 color: '#FFFFFF',
                                 '::placeholder': {
                                     color: '#FFFFFF',
@@ -171,8 +171,8 @@ console.log(selectedClass)
                         },
                     }}
                 />
-                <div className=' text-center'>
-                    <button className=' btn  btn-outline text-white   mt-20 text-center' type="submit" disabled={!stripe}>
+                <div className=' text-center mt-[50px] '>
+                    <button className=' btn  btn-outline text-white  w-[100px]  text-center' type="submit" disabled={!stripe}>
                         Pay
                     </button>
                 </div>

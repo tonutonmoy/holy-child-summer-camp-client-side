@@ -1,13 +1,14 @@
 import { MdPayment } from 'react-icons/md';
 import useSelectedClassesAll from '../../Hooks/useSelectedClassesAll';
 import { AuthContext } from '../../Provider/AuthProvider';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import Swal from 'sweetalert2';
 import { Link } from 'react-router-dom';
 
 const MySelectedClasses = () => {
 
     const [allSelectedClasses, refetch] = useSelectedClassesAll();
+    const [show, setShow] = useState(false)
 
 
 
@@ -23,7 +24,7 @@ const MySelectedClasses = () => {
 
         const token = localStorage.getItem('jwt-token')
 
-       
+
 
 
         Swal.fire({
@@ -82,13 +83,19 @@ const MySelectedClasses = () => {
 
 
 
-    }
+    };
+   
+    useEffect(() => {
+        setTimeout(() => {
+            setShow(true)
+        }, 1000)
+    }, [])
 
 
     return (
-        <div >
+        <div className='w-[90%] pb-[50px] ' >
 
-            <h2 className='text-[33px] font-medium text-center mb-10 '>Selected classes  </h2>
+            <h2 className={`text-[25px] md:text-[30px] lg:text-[30px] xl:text-[35px]  2xl:text-[40px] font-medium text-center mb-10 lg:font-semibold  rounded-md  `}>Selected classes  </h2>
             <div className="overflow-x-auto">
                 <table className="table ">
                     {/* head */}
@@ -134,9 +141,9 @@ const MySelectedClasses = () => {
 
 
                                 <td>
-                                   
-                                       <Link className='btn btn-sm bg-green-500 text-white hover:text-black'to={`/dashboard/paymentPage/${data?._id}`}> <MdPayment c /></Link>
-                                    
+
+                                    <Link className='btn btn-sm bg-green-500 text-white hover:text-black' to={`/dashboard/paymentPage/${data?._id}`}> <MdPayment c /></Link>
+
                                 </td>
 
 
@@ -147,11 +154,13 @@ const MySelectedClasses = () => {
                                 </td>
                             </tr>)
                         }
+
                     </tbody>
 
 
 
                 </table>
+                {allSelectedClasses?.length === 0 && <p className={` text-xl text-red-500 ${show?' block':' hidden'} font-semibold mt-[100px] text-center`}>You have not selected any class!</p>}
             </div>
         </div>
     );

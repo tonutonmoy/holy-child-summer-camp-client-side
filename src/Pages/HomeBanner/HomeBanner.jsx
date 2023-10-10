@@ -19,7 +19,7 @@ const HomeBanner = () => {
    
 
     return (
-        <div className="pt-36  " style={{boxShadow:'30px 30px 30px black'}}>
+        <div className="pt-[100px]  " style={{boxShadow:'5px 5px 5px black'}}>
 
             <Swiper
                      slidesPerView={1}
@@ -37,12 +37,12 @@ const HomeBanner = () => {
 
                         <img className="w-full h-[700px]" src={img3} alt="" />
 
-                        <div className=" absolute md:left-[7%] bottom-[5%]  z-10">
+                        <div className=" absolute md:left-[3%] lg:left-[4%] xl:left-[12%] 2xl:left-[22%] bottom-[5%]  z-10  ">
 
                            
                          
                           
-                            <h2 className="  text-[20px] md:text-[40px] font-medium text-white text-center my-5
+                            <h2 className="  text-[20px] md:text-[40px] lg:text-[40px] xl:text-[40px] 2xl:text-[60px] font-medium text-white text-center my-5
                             
                             ">
                                 2023 Music Explorers Summer Camp </h2>
@@ -58,8 +58,13 @@ const HomeBanner = () => {
 
 
                             <div className="text-center">
-                                <button className=" btn btn-outline  text-[20px] font-[500]  text-white   mt-5 
-                                  bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black via-black to-red-500"> apply now </button>
+                                <button className=" ring-1 ring-white rounded-md  h-[30px] md:h-[30px] lg:h-[30px]  xl:h-[35px] 2xl:h-[40px]
+                                
+                                w-[100px]  md:w-[100px]   lg:w-[100px] xl:w-[100px] 2xl:w-[150px] 
+                                
+                                text-[13px]  md:text-[13px] lg:text-[14px] xl:text-[14px] 2xl:text-[20px]  font-[500]  text-white   mt-5 
+                                
+                                bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black via-black to-red-500"> Apply now </button>
                             </div>
 
                         </div>
@@ -76,12 +81,12 @@ const HomeBanner = () => {
 
                         <img className="w-full h-[700px]" src={img1} alt="" />
 
-                        <div className=" absolute md:left-[7%] bottom-[5%]  z-10">
+                        <div className=" absolute md:left-[3%] lg:left-[4%] xl:left-[12%] 2xl:left-[22%] bottom-[5%]  z-10  ">
 
                            
                          
                           
-                            <h2 className="  text-[20px] md:text-[40px] font-medium text-white text-center my-5
+                        <h2 className="  text-[20px] md:text-[40px] lg:text-[40px] xl:text-[40px] 2xl:text-[60px] font-medium text-white text-center my-5
                             
                             ">
                                 2023 Music Explorers Summer Camp </h2>
@@ -97,8 +102,13 @@ const HomeBanner = () => {
 
 
                             <div className="text-center">
-                                <button className=" btn btn-outline  text-[20px] font-[500]  text-white   mt-5 
-                                  bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black via-black to-red-500"> apply now </button>
+                                <button className=" ring-1 ring-white rounded-md  h-[30px] md:h-[30px] lg:h-[30px]  xl:h-[35px] 2xl:h-[40px]
+                                
+                                w-[100px]  md:w-[100px]   lg:w-[100px] xl:w-[100px] 2xl:w-[150px] 
+                                
+                                text-[13px]  md:text-[13px] lg:text-[14px] xl:text-[14px] 2xl:text-[20px]  font-[500]  text-white   mt-5 
+                                
+                                bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black via-black to-red-500"> Apply now </button>
                             </div>
 
                         </div>
@@ -115,12 +125,13 @@ const HomeBanner = () => {
 
                         <img className="w-full h-[700px]" src={img2} alt="" />
 
-                        <div className=" absolute md:left-[7%] bottom-[5%]  z-10">
+                      
+                        <div className=" absolute md:left-[3%] lg:left-[4%] xl:left-[12%] 2xl:left-[22%] bottom-[5%]  z-10  ">
 
                            
                          
                           
-                            <h2 className="  text-[20px] md:text-[40px] font-medium text-white text-center my-5
+                        <h2 className="  text-[20px] md:text-[40px] lg:text-[40px] xl:text-[40px] 2xl:text-[60px] font-medium text-white text-center my-5
                             
                             ">
                                 2023 Music Explorers Summer Camp </h2>
@@ -136,8 +147,13 @@ const HomeBanner = () => {
 
 
                             <div className="text-center">
-                                <button className=" btn btn-outline  text-[20px] font-[500]  text-white   mt-5 
-                                  bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black via-black to-red-500"> apply now </button>
+                                <button className=" ring-1 ring-white rounded-md  h-[30px] md:h-[30px] lg:h-[30px]  xl:h-[35px] 2xl:h-[40px]
+                                
+                                w-[100px]  md:w-[100px]   lg:w-[100px] xl:w-[100px] 2xl:w-[150px] 
+                                
+                                text-[13px]  md:text-[13px] lg:text-[14px] xl:text-[14px] 2xl:text-[20px]  font-[500]  text-white   mt-5 
+                                
+                                bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black via-black to-red-500"> Apply now </button>
                             </div>
 
                         </div>
@@ -156,12 +172,13 @@ const HomeBanner = () => {
 
                         <img className="w-full h-[700px]" src={img4} alt="" />
 
-                        <div className=" absolute md:left-[7%] bottom-[5%]  z-10">
+                       
+                        <div className=" absolute md:left-[3%] lg:left-[4%] xl:left-[12%] 2xl:left-[22%] bottom-[5%]  z-10  ">
 
                            
                          
                           
-                            <h2 className="  text-[20px] md:text-[40px] font-medium text-white text-center my-5
+                        <h2 className="  text-[20px] md:text-[40px] lg:text-[40px] xl:text-[40px] 2xl:text-[60px] font-medium text-white text-center my-5
                             
                             ">
                                 2023 Music Explorers Summer Camp </h2>
@@ -177,8 +194,13 @@ const HomeBanner = () => {
 
 
                             <div className="text-center">
-                                <button className=" btn btn-outline  text-[20px] font-[500]  text-white   mt-5 
-                                  bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black via-black to-red-500"> apply now </button>
+                                <button className=" ring-1 ring-white rounded-md  h-[30px] md:h-[30px] lg:h-[30px]  xl:h-[35px] 2xl:h-[40px]
+                                
+                                w-[100px]  md:w-[100px]   lg:w-[100px] xl:w-[100px] 2xl:w-[150px] 
+                                
+                                text-[13px]  md:text-[13px] lg:text-[14px] xl:text-[14px] 2xl:text-[20px]  font-[500]  text-white   mt-5 
+                                
+                                bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black via-black to-red-500"> Apply now </button>
                             </div>
 
                         </div>

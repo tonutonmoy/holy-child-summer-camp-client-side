@@ -77,7 +77,7 @@ const ManageUser = () => {
     return (
         <div className=" w-[90%] mx-auto  ">
 
-            <h2 className='text-[33px] font-medium text-center mb-10 '>Manage users </h2>
+            <h2 className={`text-[25px] md:text-[30px] lg:text-[30px] xl:text-[35px]  2xl:text-[40px] font-medium text-center mb-10 lg:font-semibold  rounded-md  `}>Manage users </h2>
 
             <div className="overflow-x-auto ">
                 <table className="table ">
@@ -98,10 +98,10 @@ const ManageUser = () => {
 
 
 
-                            <th className=" text-center">
+                            <th className=" text-center  p-5">
                                 action
                             </th>
-                            <th className=" text-center" >
+                            <th className=" text-center  " >
                                 action
                             </th>
 

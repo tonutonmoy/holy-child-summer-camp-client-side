@@ -14,7 +14,7 @@ const Registration = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
 
 
-    const { createUser, updateUserProfile, googleLogin } = useContext(AuthContext)
+    const { createUser, updateUserProfile, googleLogin,toggle } = useContext(AuthContext)
 
 
 
@@ -148,25 +148,28 @@ const Registration = () => {
 
 
     return (
-        <div>
-            <div className="hero min-h-screen bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900">
-                <div className="grid md:grid-cols-2   w-[90%]  items-center space-y-20 my-40 ">
-                    <section className="text-center lg:text-left">
+        <div className={`py-[100px] ${toggle && 'bg-[#090909] text-white'}`}>
+             <h2 className={`text-[25px] md:text-[30px] lg:text-[30px] xl:text-[35px]  2xl:text-[40px] font-medium text-center mt-20 lg:font-semibold  rounded-md  `}> Registration here!!!</h2>
+            <div className={`hero min-h-screen ${toggle? 'bg-[#090909] text-white':'bg-white'}  `}>
+                
+                <div className="grid md:grid-cols-2   w-[90%]  items-center space-y-20  ">
+                    
+                    <section className={`text-center lg:text-left ${toggle && "border-[5px]  rounded-md"}`}>
 
                         <img className='w-full' src={bg} alt="" />
                     </section>
-                    <section className=' md:flex justify-center'>
-                        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 login-from
-                     bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-white via-sky-500 to-sky-500
-                        ">
+                    <section >
+                        <div className={`card   w-[100%] md:w-[90%] lg:w-[80%] xl:w-[70%] 2xl:w-[70%] mx-auto  py-5  login-from ${toggle && 'border-[1px]' }
+               
+                        `}>
 
-                            <h2 className=' text-[30px] font-[500]  text-center mt-20 '> Registration here!!!</h2>
+                           
                             <form onSubmit={handleSubmit(onSubmit)} className="card-body py-0 ">
                                 <div className="form-control">
                                     <label className="label ">
-                                        <span className="font-medium text-xl my-2">Name</span>
+                                        <span className="font-medium text-xl ">Name</span>
                                     </label>
-                                    <input type="text" placeholder="name" className="input input-bordered"
+                                    <input type="text" placeholder="name" className="input text-gray-500 input-bordered"
 
                                         {...register("name", { required: true, })}
                                     />
@@ -174,9 +177,9 @@ const Registration = () => {
                                 </div>
                                 <div className="form-control">
                                     <label className="label ">
-                                        <span className="font-medium text-xl my-2">Email</span>
+                                        <span className="font-medium text-xl ">Email</span>
                                     </label>
-                                    <input type="email" placeholder="email" className="input input-bordered"
+                                    <input type="email" placeholder="email" className="input input-bordered text-gray-500"
 
                                         {...register("email", { required: true, })}
                                     />
@@ -186,9 +189,9 @@ const Registration = () => {
 
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="font-medium text-xl my-2">Password</span>
+                                        <span className="font-medium text-xl ">Password</span>
                                     </label>
-                                    <input type='text' placeholder="password" className="input input-bordered "
+                                    <input type='text' placeholder="password" className="input input-bordered  text-gray-500"
 
                                         {...register("password", {
                                             required: true,
@@ -207,9 +210,9 @@ const Registration = () => {
 
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="font-medium text-xl my-2">Confirm password</span>
+                                        <span className="font-medium text-xl ">Confirm password</span>
                                     </label>
-                                    <input type='text' placeholder="confirm password" className="input input-bordered "
+                                    <input type='text' placeholder="confirm password" className="input input-bordered text-gray-500"
 
                                         {...register("confirmPassword", { required: true })}
                                     />
@@ -223,9 +226,9 @@ const Registration = () => {
 
                                 <div className="form-control">
                                     <label className="label">
-                                        <span className="font-medium text-xl my-2">Photo Url</span>
+                                        <span className="font-medium text-xl ">Photo Url</span>
                                     </label>
-                                    <input type='text' placeholder="photo url" className="input input-bordered "
+                                    <input type='text' placeholder="photo url" className="input input-bordered text-gray-500"
 
                                         {...register("photoUrl", { required: true })}
                                     />
@@ -246,12 +249,12 @@ const Registration = () => {
 
 
                                 <div className="form-control mt-6">
-                                    <button className="btn text-[15px] 
-                                    bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-white via-sky-500 to-sky-500
+                                    <button className="btn text-[15px]  text-white
+                                   bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-red-500/90 via-black to-red-500/90
                                    ">Registration</button>
                                 </div>
 
-                                <div className="divider my-8">OR</div>
+                                <div className="divider ">OR</div>
 
 
 
@@ -260,7 +263,7 @@ const Registration = () => {
 
                             </form>
                             <div className='mx-8'>
-                                <button onClick={googleHandler} className='btn bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-white via-sky-500 to-sky-500  mb-10 w-full'>
+                                <button onClick={googleHandler} className='btn bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-red-500/90 via-black to-red-500/90 mb-10 w-full text-white'>
                                     <BsGoogle className=' text-[30px] ' />
                                 </button>
 

@@ -18,9 +18,18 @@ const AuthProvider = ({ children }) => {
 
     const [loading, setLoading] = useState(true);
 
-    const [toggle,setToggle]=useState(false);
+    //  dark mode start
+    const initialDarkMode = localStorage.getItem('darkMode') === 'true';
 
 
+    const [toggle, setToggle] = useState(initialDarkMode);
+
+
+    useEffect(() => {
+        localStorage.setItem('darkMode', toggle);
+    }, [toggle]);
+
+    //  dark mode end
 
     const createUser = (email, password) => {
 

@@ -7,7 +7,7 @@ import useAllClassesData from "../../Hooks/useAllClassesData";
 
 const AddAClass = () => {
 
-    const {user}=useContext(AuthContext);
+    const {user,toggle}=useContext(AuthContext);
 
      const [,refetch] = useAllClassesData()
 
@@ -75,17 +75,17 @@ const AddAClass = () => {
     }
 
     return (
-        <div className=" w-full py-60  " >
-<h2 className='text-[33px] font-medium text-center  '>Add  a classes </h2>
+        <div className=" w-full pb-60  " >
+<h2 className={`text-[25px] md:text-[30px] lg:text-[30px] xl:text-[35px]  2xl:text-[40px] font-medium text-center mb-10 lg:font-semibold  rounded-md  `}>Add  a classes </h2>
 
-            <form onSubmit={formHandler} className="w-[90%] mx-auto     bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-white via-sky-500 to-sky-500 px-20 py-10 mt-40 rounded-lg " >
+            <form onSubmit={formHandler} className={`w-[90%] md:w-[90%] lg:w-[90%] xl:w-[70%] 2xl:w-[50%] mx-auto  mt-10  ${toggle && ' border-[1px] '}  px-4 md:px-2  lg:px-4  xl:px-0  2xl:px-0   py-10  rounded-lg `} >
 
-                <section className=" grid grid-cols-2 ">
+                <section className=" grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 xxl:grid-cols-2  gap-0 md:gap-0 lg:gap-5 xl:gap-0 2xl:gap-0">
 
                     <div className=" text-center my-5">
 
                         <p className=" text-[18px] font-[500] "> Class name</p>
-                        <input type="text" placeholder="class name" name="className" className="input input-bordered input-md w-full max-w-xs my-3  " required />
+                        <input type="text" placeholder="class name" name="className" className="input input-bordered input-md w-full max-w-xs my-3 text-gray-500 " required />
 
 
                     </div>
@@ -94,7 +94,7 @@ const AddAClass = () => {
                     <div className=" text-center my-5">
 
                         <p className=" text-[18px] font-[500] "> Class image</p>
-                        <input type="text" placeholder="class image" name="classImage" className="input input-bordered input-md w-full max-w-xs my-3 " required />
+                        <input type="text" placeholder="class image" name="classImage" className="input input-bordered input-md w-full max-w-xs my-3 text-gray-500" required />
 
 
                     </div>
@@ -103,7 +103,7 @@ const AddAClass = () => {
                     <div className=" text-center my-5">
 
                         <p className=" text-[18px] font-[500] "> Name</p>
-                        <input type="text" placeholder="name" name="name" className="input input-bordered input-md w-full max-w-xs my-3 " required  readOnly defaultValue={user?.displayName} />
+                        <input type="text" placeholder="name" name="name" className="input input-bordered input-md w-full max-w-xs my-3 text-gray-500" required  readOnly defaultValue={user?.displayName} />
 
 
                     </div>
@@ -111,7 +111,7 @@ const AddAClass = () => {
                     <div className=" text-center my-5">
 
                         <p className=" text-[18px] font-[500] "> Email</p>
-                        <input type="email" placeholder="email" name="email" className="input input-bordered input-md w-full max-w-xs my-3  " required  readOnly defaultValue={user?.email} />
+                        <input type="email" placeholder="email" name="email" className="input input-bordered input-md w-full max-w-xs my-3  text-gray-500" required  readOnly defaultValue={user?.email} />
 
 
                     </div>
@@ -119,7 +119,7 @@ const AddAClass = () => {
                     <div className=" text-center my-5">
 
                         <p className=" text-[18px] font-[500] ">Available seats</p>
-                        <input type="number" placeholder="available seats" name="availableSeats" className="input input-bordered input-md w-full max-w-xs my-3  " required />
+                        <input type="number" placeholder="available seats" name="availableSeats" className="input input-bordered input-md w-full max-w-xs my-3 text-gray-500 " required />
 
 
                     </div>
@@ -129,7 +129,7 @@ const AddAClass = () => {
                   
 
                         <p className=" text-[18px] font-[500]   "> Price</p>
-                        <input type="number" placeholder="price" name="price" className="input input-bordered input-md w-full max-w-xs my-3   " required />
+                        <input type="number" placeholder="price" name="price" className="input input-bordered input-md w-full max-w-xs my-3   text-gray-500" required />
 
 
                     </div>
@@ -144,7 +144,7 @@ const AddAClass = () => {
 
 
               <section className=" text-center mt-10">
-              <button className="btn w-[50%] btn-outline border-white bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-white via-sky-500 to-sky-500 hover:border-white hover:text-black
+              <button className="btn w-[50%] btn-outline border-white bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-red-500/90 via-black to-red-500/90 text-white hover:border-white 
               text-[17px] font-[500]">Add</button>
               </section>
 

@@ -7,6 +7,7 @@ const MyEnrolledClasses = () => {
 
     const { user } = useContext(AuthContext);
     const [data, setData] = useState([]);
+    const [show, setShow] = useState(false)
 
 
 
@@ -35,13 +36,20 @@ const MyEnrolledClasses = () => {
 
     console.log(data)
 
+    
+    useEffect(() => {
+        setTimeout(() => {
+            setShow(true)
+        }, 1000)
+    }, [])
+
     return (
 
 
 
-        <div className=" w-[90%] mx-auto  ">
+        <div className=" w-[90%] mx-auto pb-[50px] ">
 
-            <h2 className='text-[33px] font-medium text-center mb-10 '>Enrolled classes </h2>
+            <h2 className={`text-[25px] md:text-[30px] lg:text-[30px] xl:text-[35px]  2xl:text-[40px] font-medium text-center mb-10 lg:font-semibold  rounded-md  `}>Enrolled classes </h2>
             <div className="overflow-x-auto ">
                 <table className="table ">
                     {/* head */}
@@ -94,6 +102,7 @@ const MyEnrolledClasses = () => {
 
 
                 </table>
+                {data?.length === 0 && <p className={` text-xl text-red-500 ${show?' block':' hidden'} font-semibold mt-[100px] text-center`}>You have not Enrolled any courses yet!</p>}
             </div>
         </div>
 

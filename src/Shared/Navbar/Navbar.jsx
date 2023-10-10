@@ -28,13 +28,13 @@ const Navbar = () => {
 
 
         <li>
-            <Link className=" text-[20px] font-[500] p-3 mx-3 md:text-white " to='/'> Home</Link>
+            <Link className=" text-[15px] md-[15px] lg:-text-[18px]  xl:text-[20px] 2xl:text-[20px] font-[500] p-3 mx-3 md:text-white " to='/'> Home</Link>
         </li>
         <li>
-            <Link className=" text-[20px] font-[500] p-3 mx-3 md:text-white" to='/instructors'> Instructors</Link>
+            <Link className=" text-[15px] md-[15px] lg:-text-[18px]  xl:text-[20px] 2xl:text-[20px] font-[500] p-3 mx-3 md:text-white" to='/instructors'> Instructors</Link>
         </li>
         <li>
-            <Link className=" text-[20px] font-[500] p-3 mx-3 md:text-white" to='/classes'> Classes</Link>
+            <Link className=" text-[15px] md-[15px] lg:-text-[18px]  xl:text-[20px] 2xl:text-[20px] font-[500] p-3 mx-3 md:text-white" to='/classes'> Classes</Link>
         </li>
 
 
@@ -42,7 +42,7 @@ const Navbar = () => {
             user ? <>
 
                 <li>
-                    <Link className=" text-[20px] font-[500] p-3 mx-3 md:text-white" to='/dashboard'> Dashboard </Link>
+                    <Link className=" text-[15px] md-[15px] lg:-text-[18px]  xl:text-[20px] 2xl:text-[20px] font-[500] p-3 mx-3 md:text-white" to='/dashboard'> Dashboard </Link>
                 </li>
 
                 <li>
@@ -55,7 +55,7 @@ const Navbar = () => {
 
                 </li>
                 <li>
-                    <button onClick={logOutHandler} className=" btn-ghost text-[20px] font-[500] p-3 mx-3 text-white  ">Logout</button>
+                    <button onClick={logOutHandler} className=" btn-ghost text-[15px] md-[15px] lg:-text-[18px]  xl:text-[20px] 2xl:text-[20px] font-[500] p-3 mx-3 text-white  ">Logout</button>
 
                 </li>
 
@@ -65,7 +65,7 @@ const Navbar = () => {
             </>
 
                 : <li>
-                    <Link className=" text-[20px] font-[500] p-3 mx-3 md:text-white" to='/login'> Login </Link>
+                    <Link className=" text-[15px] md-[15px] lg:-text-[18px]  xl:text-[20px] 2xl:text-[20px] font-[500] p-3 mx-3 md:text-white" to='/login'> Login </Link>
                 </li>
 
 
@@ -79,21 +79,22 @@ const Navbar = () => {
     </>
     return (
         <div >
-            <div className="navbar  fixed z-10  md:justify-between md:p-10 bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-sky-400 to-blue-800">
+            <div className={`navbar h-[100px]   fixed z-10  md:justify-between md:p-10 ${toggle?" bg-[#090909] ":"bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-gray-700 to-slate-900"} `}>
 
                 <div className="">
 
                     <div className="dropdown">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
-                            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" className={`h-5 w-5  text-white`} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </label>
-                        <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
+                        <ul tabIndex={0} className={`menu menu-sm dropdown-content mt-6 p-2  ${toggle?"bg-[#090909] ":"bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-gray-700 to-slate-900"}  shadow  text-white rounded-box w-52
+                        bg-black/50`}>
 
                             {navItem}
                         </ul>
                     </div>
-                    <div className="flex items-center md:space-x-10 ">
-                        <h2 className=" md:text-[30px] md:font-[500] text-white ">Holy child school</h2>
+                    <div className="flex items-center md:space-x-[400px] lg:space-x-10 xl:space-x-10 2xl:space-x-10   ">
+                        <h2 className=" text-[15px] md:text-[20px] lg:text-[18px] xl:text-[25px] 2xl:text-[30px] font-[500] text-white ">Holy child school</h2>
                         <img className="md:w-[70px] md:h-[70px] w-[40px] h-[40px] border-4 md:ml-0 ml-32  rounded-full border-white" src={logo} alt="" />
                     </div>
 

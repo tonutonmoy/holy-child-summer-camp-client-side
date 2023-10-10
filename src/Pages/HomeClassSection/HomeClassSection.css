@@ -1,9 +1,12 @@
 
 .class-section{
-    background-image: url(../../assets/classesSection/pexels-suvan-chowdhury-144429.jpg);
+    background-image: url(../../assets/classesSection/pexels-suvan-chowdhury-144429-min.jpg);
+ 
     background-repeat: no-repeat;
 
     background-size: cover;
-    box-shadow: 30px 30px 30px black;
+    
+
+    
     
 }

@@ -12,7 +12,7 @@ const Home = () => {
 
     console.log(toggle)
     return (
-        <div className={`${toggle=== true ? 'bg-black text-white':'bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900-500'}`} >
+        <div className={`${toggle=== true ? 'bg-[#090909] text-white':'bg-white'} overflow-hidden`} >
             <HomeBanner></HomeBanner>
 
             <HomeClassSection></HomeClassSection>

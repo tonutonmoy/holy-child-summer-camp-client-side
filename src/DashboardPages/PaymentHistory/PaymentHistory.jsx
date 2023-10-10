@@ -9,6 +9,7 @@ const PaymentHistory = () => {
 
     const { user } = useContext(AuthContext);
     const [data, setData] = useState([]);
+    const [show, setShow] = useState(false)
 
 
 
@@ -38,14 +39,22 @@ const PaymentHistory = () => {
 
     console.log(data)
 
+    
+    useEffect(() => {
+        setTimeout(() => {
+            setShow(true)
+        }, 1000)
+    }, [])
+
+
 
     return (
-        <div className=" w-[90%] mx-auto  ">
+        <div className=" w-[90%] mx-auto  pb-[50px] ">
 
-            <h2 className='text-[33px] font-medium text-center mb-10'> Payment history  </h2>
+            <h2 className={`text-[25px] md:text-[30px] lg:text-[30px] xl:text-[35px]  2xl:text-[40px] font-medium text-center mb-10 lg:font-semibold  rounded-md  `}> Payment history  </h2>
 
             <div className="overflow-x-auto ">
-                <table className="table ">
+                <table className="table  ">
                     {/* head */}
                     <thead className="  text-white text-[20px] 
              bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r">
@@ -97,6 +106,7 @@ const PaymentHistory = () => {
 
 
                 </table>
+                {data?.length === 0 && <p className={` text-xl text-red-500 ${show?' block':' hidden'} font-semibold mt-[100px] text-center`}>No payment history are available!</p>}
             </div>
         </div>
 

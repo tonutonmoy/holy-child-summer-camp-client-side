@@ -32,6 +32,7 @@ More info: https://stripe.com/docs/stripe-js/reference#element-options
     rgba(0, 0, 0, 0.0196078) 0px 1px 0px;
   border-radius: 4px;
   background: white;
+  
 }
 
 .StripeElement--focus,

@@ -16,6 +16,8 @@ import PaymentHistory from "../DashboardPages/PaymentHistory/PaymentHistory";
 import PaymentPage from "../DashboardPages/PaymentPage/PaymentPage";
 import PrivateRoute from "../PrivateRouts/PrivateRoute";
 import NotFound from "../NotFound/NotFound";
+import PrivateRouteForStudent from "../PrivateRouts/PrivateRouteForStudent";
+
 
 
 const router = createBrowserRouter([

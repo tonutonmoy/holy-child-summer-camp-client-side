@@ -12,12 +12,13 @@ import AuthProvider from './Provider/AuthProvider';
 
 
 import {
-  useQuery,
-  useMutation,
-  useQueryClient,
+ 
   QueryClient,
   QueryClientProvider,
 } from '@tanstack/react-query'
+
+import AOS from 'aos';
+AOS.init();
 
 const queryClient = new QueryClient()
 
