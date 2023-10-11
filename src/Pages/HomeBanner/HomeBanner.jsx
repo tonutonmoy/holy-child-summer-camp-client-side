@@ -8,10 +8,10 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper";
 
 
-import img1 from '../../assets/homeBanner/pexels-pavel-danilyuk-7520930-min.jpg'
-import img2 from '../../assets/homeBanner/pexels-rdne-stock-project-8363027-min.jpg'
-import img3 from '../../assets/homeBanner/pexels-roxanne-minnish-4513456-min.jpg'
-import img4 from '../../assets/homeBanner/pexels-turkan-bakirli-16999360-min.jpg'
+import img1 from '../../assets/homeBanner/pexels-pavel-danilyuk-7520931.jpg'
+import img2 from '../../assets/homeBanner/pexels-pavel-danilyuk-7520932.jpg'
+import img3 from '../../assets/homeBanner/pexels-pavel-danilyuk-7520933.jpg'
+import img4 from '../../assets/homeBanner/pexels-pavel-danilyuk-7520934.jpg'
 
 const HomeBanner = () => {
 
@@ -35,7 +35,7 @@ const HomeBanner = () => {
                 <SwiperSlide>
                     <div className=" relative ">
 
-                        <img className="w-full h-[700px]" src={img3} alt="" />
+                        <img className="w-full h-[600px] md:h-[650px] lg:h-[650px] xl:h-[650px] 2xl:h-[780px]" src={img1} alt="" />
 
                         <div className=" absolute md:left-[3%] lg:left-[4%] xl:left-[12%] 2xl:left-[22%] bottom-[5%]  z-10  ">
 
@@ -79,7 +79,7 @@ const HomeBanner = () => {
                 <SwiperSlide>
                     <div className=" relative">
 
-                        <img className="w-full h-[700px]" src={img1} alt="" />
+                        <img className="w-full h-[600px] md:h-[650px] lg:h-[650px] xl:h-[650px] 2xl:h-[780px]" src={img2} alt="" />
 
                         <div className=" absolute md:left-[3%] lg:left-[4%] xl:left-[12%] 2xl:left-[22%] bottom-[5%]  z-10  ">
 
@@ -123,7 +123,7 @@ const HomeBanner = () => {
                 <SwiperSlide>
                     <div className=" relative">
 
-                        <img className="w-full h-[700px]" src={img2} alt="" />
+                        <img className="w-full h-[600px] md:h-[650px] lg:h-[650px] xl:h-[650px] 2xl:h-[780px]" src={img3} alt="" />
 
                       
                         <div className=" absolute md:left-[3%] lg:left-[4%] xl:left-[12%] 2xl:left-[22%] bottom-[5%]  z-10  ">
@@ -170,7 +170,7 @@ const HomeBanner = () => {
                 <SwiperSlide>
                     <div className=" relative">
 
-                        <img className="w-full h-[700px]" src={img4} alt="" />
+                        <img className="w-full h-[600px] md:h-[650px] lg:h-[650px] xl:h-[650px] 2xl:h-[780px]" src={img4} alt="" />
 
                        
                         <div className=" absolute md:left-[3%] lg:left-[4%] xl:left-[12%] 2xl:left-[22%] bottom-[5%]  z-10  ">

@@ -28,7 +28,7 @@ const HomeExtraSection = () => {
 
              <div
             
-             className='w-full  h-[500px] lg:h-[300px]  bg-black photo-div  border   hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black650 to-red-500/60
+             className='w-full  h-[300px]   bg-black photo-div  border   hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black650 to-red-500/60
                   '>
 
                 <img className='w-full h-full p-5  rounded-[30%] border border-white  hover:scale-90 duration-[1s] ' src={img1} alt="" />
@@ -36,7 +36,7 @@ const HomeExtraSection = () => {
              </div>
 
 
-             <div className='w-full  h-[500px]  lg:h-[300px] bg-black photo-div  border   hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black650 to-red-500/60
+             <div className='w-full  h-[300px]  bg-black photo-div  border   hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black650 to-red-500/60
                   '>
 
                 <img className='w-full h-full p-5  rounded-[30%] border border-white  hover:scale-90 duration-[1s] ' src={img2} alt="" />
@@ -44,7 +44,7 @@ const HomeExtraSection = () => {
              </div>
 
 
-             <div className='w-full  h-[500px]  lg:h-[300px] bg-black photo-div  border   hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black650 to-red-500/60
+             <div className='w-full  h-[300px]  bg-black photo-div  border   hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black650 to-red-500/60
                   '>
 
                 <img className='w-full h-full p-5  rounded-[30%] border border-white  hover:scale-90 duration-[1s] ' src={img3} alt="" />
@@ -52,7 +52,7 @@ const HomeExtraSection = () => {
              </div>
 
 
-             <div className='w-full  h-[500px]  lg:h-[300px] bg-black photo-div  border   hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black650 to-red-500/60
+             <div className='w-full  h-[300px]  bg-black photo-div  border   hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black650 to-red-500/60
                   '>
 
                 <img className='w-full h-full p-5  rounded-[30%] border border-white  hover:scale-90 duration-[1s] ' src={img4} alt="" />
@@ -61,7 +61,7 @@ const HomeExtraSection = () => {
 
 
 
-             <div className='w-full  h-[500px]  lg:h-[300px] bg-black photo-div  border   hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black650 to-red-500/60
+             <div className='w-full  h-[300px]  bg-black photo-div  border   hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black650 to-red-500/60
                   '>
 
                 <img className='w-full h-full p-5  rounded-[30%] border border-white  hover:scale-90 duration-[1s] ' src={img5} alt="" />
@@ -69,7 +69,7 @@ const HomeExtraSection = () => {
              </div>
 
 
-             <div className='w-full  h-[500px] lg:h-[300px] bg-black photo-div  border   hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black650 to-red-500/60
+             <div className='w-full  h-[300px]  bg-black photo-div  border   hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black650 to-red-500/60
                   '>
 
                 <img className='w-full h-full p-5  rounded-[30%] border border-white  hover:scale-90 duration-[1s]  ' src={img6} alt="" />
@@ -77,7 +77,7 @@ const HomeExtraSection = () => {
              </div>
 
 
-             <div className='w-full  h-[500px] lg:h-[300px]  bg-black photo-div  border   hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black650 to-red-500/60
+             <div className='w-full  h-[300px]   bg-black photo-div  border   hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black650 to-red-500/60
                   '>
 
                 <img className='w-full h-full p-5  rounded-[30%] border border-white  hover:scale-90 duration-[1s] ' src={img7} alt="" />
@@ -85,7 +85,7 @@ const HomeExtraSection = () => {
              </div>
 
 
-             <div className='w-full  h-[500px]  lg:h-[300px] bg-black photo-div  border     hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black650 to-red-500/60
+             <div className='w-full  h-[300px]  bg-black photo-div  border     hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black650 to-red-500/60
                   '>
 
                 <img className='w-full h-full p-5  rounded-[30%] border border-white  hover:scale-90 duration-[1s] ' src={img8} alt="" />
@@ -94,7 +94,7 @@ const HomeExtraSection = () => {
 
 
 
-             <div className='w-full  h-[500px]  lg:h-[300px] bg-black photo-div  border  shadow-2xl  hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black650 to-red-500/60
+             <div className='w-full  h-[300px]  bg-black photo-div  border  shadow-2xl  hover:bg-[conic-gradient(at_bottom,_var(--tw-gradient-stops))] from-black/60 via-black650 to-red-500/60
                   '>
 
                 <img className='w-full h-full p-5  rounded-[30%] border border-white  hover:scale-90 duration-[1s] ' src={img9} alt="" />
