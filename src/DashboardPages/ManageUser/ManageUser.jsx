@@ -75,7 +75,7 @@ const ManageUser = () => {
     }
 
     return (
-        <div className=" w-[90%] mx-auto  ">
+        <div className=" w-[90%] mx-auto mb-20 ">
 
             <h2 className={`text-[25px] md:text-[30px] lg:text-[30px] xl:text-[35px]  2xl:text-[40px] font-medium text-center mb-10 lg:font-semibold  rounded-md  `}>Manage users </h2>
 

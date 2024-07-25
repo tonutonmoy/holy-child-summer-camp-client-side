@@ -78,7 +78,7 @@ const AddAClass = () => {
         <div className=" w-full pb-60  " >
 <h2 className={`text-[25px] md:text-[30px] lg:text-[30px] xl:text-[35px]  2xl:text-[40px] font-medium text-center mb-10 lg:font-semibold  rounded-md  `}>Add  a classes </h2>
 
-            <form onSubmit={formHandler} className={`w-[90%] md:w-[90%] lg:w-[90%] xl:w-[70%] 2xl:w-[50%] mx-auto  mt-10  ${toggle && ' border-[1px] '}  px-4 md:px-2  lg:px-4  xl:px-0  2xl:px-0   py-10  rounded-lg `} >
+            <form onSubmit={formHandler} className={`w-[90%] md:w-[90%] lg:w-[90%] xl:w-[70%] 3xl:w-[50%] mx-auto  mt-10  ${toggle && ' border-[1px] '}  px-4 md:px-2  lg:px-4  xl:px-0  2xl:px-0   py-10  rounded-lg `} >
 
                 <section className=" grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-2 xxl:grid-cols-2  gap-0 md:gap-0 lg:gap-5 xl:gap-0 2xl:gap-0">
 

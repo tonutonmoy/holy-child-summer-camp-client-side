@@ -143,7 +143,7 @@ const ManageClasses = () => {
         <div className=" w-[90%] mx-auto ">
 
             <h2 className={`text-[25px] md:text-[30px] lg:text-[30px] xl:text-[35px]  2xl:text-[40px] font-medium text-center mb-10 lg:font-semibold  rounded-md  `}>Manage classes </h2>
-            <div className=" w-full  pb-20 rounded-[30px]  grid md:grid-cols-2 gap-10 lg:grid-cols-1  xl:grid-cols-2  2xl:grid-cols-3 "  >
+            <div className=" w-full  pb-20 rounded-[30px]  grid md:grid-cols-2 gap-10 lg:grid-cols-1  xl:grid-cols-2  3xl:grid-cols-3 "  >
 
 
 

@@ -95,7 +95,7 @@ const Navbar = () => {
                     </div>
                     <div className="flex items-center md:space-x-[400px] lg:space-x-10 xl:space-x-10 2xl:space-x-10   ">
                         <h2 className=" text-[15px] md:text-[20px] lg:text-[18px] xl:text-[25px] 2xl:text-[30px] font-[500] text-white ">Holy child school</h2>
-                        <img className="md:w-[70px] md:h-[70px] w-[40px] h-[40px] border-4 md:ml-0 ml-32  rounded-full border-white" src={logo} alt="" />
+                        <img className="md:w-[70px] md:h-[70px] w-[40px] h-[40px]  border-4 md:ml-0 ml-32  rounded-full border-white" src={logo} alt="" />
                     </div>
 
                 </div>
